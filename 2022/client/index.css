@@ -1,0 +1,95 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/city.jpg");
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+}
+.title-container,
+.manual-container {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: 0 auto;
+}
+.title-container *,
+.manual-container * {
+  color: white;
+}
+
+#hotel {
+  width: 200px;
+  display: block;
+}
+
+#help {
+  width: 30px;
+  display: inline;
+}
+
+.title {
+  display: inline;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+.informatie {
+  border: 5px solid black;
+  padding: 20px;
+  margin: 10px;
+}
+
+.read {
+  background-color: rgb(0, 101, 0);
+}
+
+.create {
+  background-color: rgb(70, 12, 196);
+}
+
+.update {
+  background-color: rgb(165, 65, 12);
+}
+
+.delete {
+  background-color: rgb(165, 12, 12);
+}
+
+.hide {
+  display: none;
+}
+
+.form-control {
+  display: block !important;
+}
+
+.input-group * {
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 40px;
+}
+
+p,
+li {
+  font-size: 28px;
+}
+
+img {
+  display: inline-block !important;
+  width: 150px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS&Express</title>
+    <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Laborator9_Node.css">
+</head>
+
+<body>
+    <h1>Adapost de animale</h1>
+    <div class="sectiune-adauga">
+        <h2>Adauga un animal nou</h2>
+        <span class="label">Nume:</span> <input type="text" id="nume" />
+        <span class="label">Animal:</span>
+        <select name="" id="tip">
+            <option>Caine</option>
+            <option>Pisica</option>
+        </select>
+        <span class="label">Imagine URL:</span> <input type="text" id="imagine-animal" />
+        <button id="adauga-btn">Adauga animal</button>
+    </div>
+    <h4>Selecteaza pagina</h4>
+    <div class="pagination">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+    </div>
+    <div id="lista-animale">
+        <div class="item">
+            <h3>Nume: Rex</h3>
+            <h3>Animal: caine</h3>
+            <img src="../imagini/caine.png" alt="imagine-caine">
+            <br />
+            <div class="menu">
+
+                <button>Adopta</button>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="Laborator9_Node.js"></script>
+</body>
+
+</html>

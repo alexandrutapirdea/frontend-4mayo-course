@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2019
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet"/>
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="top navbar navbar-expand-lg navbar-light bg-light">
+    <div class="row" class="collapse navbar-collapse">
+        <div class="col-sm-3" >
+            <div class="logo">
+                <a href="../index.html" ><img src="../css/images/logo.png" alt="LaboratorTW"/>
+                </a>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="col-sm-9" id="navbarSupportedContent">
+            <nav id="desktop-menu">
+                <ul class="sf-menu" id="navigation">
+                    <li><a href="../index.html">Acasa</a>
+                    <li><a href="./Notare.html">Notare</a>
+                    </li>
+                    <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc" aria-hidden="true"></i></a>
+                        <ul class="dropdown-ul">
+                            <li><a href="./Laborator1.html">Laborator 1</a></li>
+                            <li><a href="./Laborator2.html">Laborator 2</a></li>
+                            <li><a href="./Laborator2.html">Laborator 3</a></li>
+                            <li><a href="Laborator4.html">Laborator 4</a></li>
+                            <li><a href="Laborator5.html">Laborator 5</a></li>
+                            <li><a href="#">Laborator 6</a></li>
+                            <li><a href="./Laborator8.html">Laborator 8</a></li>
+                            <li><a href="#">Laborator 9</a></li>
+                            <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                    <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-sm-12 center-block">
+
+        <div style="text-align: center">
+            <h2>Laborator 8</h2>
+        </div>
+        <div class="message" style="margin-top:30px;">
+            <div style="border:5px solid black; margin:3%;padding: 3%;" class="message">
+                <h2 style="font-size: 32px">AJAX - Asynchronous JavaScript And XML</h2>
+                <p>Click aici : <a href="../pages/Laborator8/ajax.html" target="_blank"><b>Despre AJAX - cod si explicatii</b></a>
+                <p>Exercitiu de laborator: Realizati formularul din imagine</p>
+                <p class="observatie">Nu folositi form din HTML. Folositi doar input-urile si luati valoarea din ele cu Javascript</p>
+                <p class="observatie">Folositi Bootstrap pentru input-uri</p>
+                <img src="../pages/Laborator8/formular.PNG" alt="formular de facut; lipsa fisier"/>
+                <p>Daca utilizatorul exista, afisati numele complet, orasul si compania pentru care lucreaza</p>
+                <p>Daca utilizatorul nu exista, afisati un mesaj de eroare "username sau email invalid"</p>
+                <p>Folositi pentru request: https://jsonplaceholder.typicode.com/users</p>
+                <p class="observatie">Se va crea un div nou in pagina care contine fie informatiile despre utilizator, fie paragraful cu mesajul de eroare</p>
+                <p class="observatie">OBS: AJAX este unul dintre punctele obligatorii pentru proiectul de JS. Va rog sa va uitati peste explicatii si sa intrebati ce nu este clar</p>
+            </div>
+            <div style="border:5px solid black; margin:3%;padding: 3%;" class="message">
+                <h2 style="font-size: 32px">LocalStorage</h2>
+                <p>Daca ati terminat deja partea de AJAX, cititi despre LocalStorage si rezolvati urmatoarea cerinta: </p>
+                <p>Click aici : <a href="https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/" target="_blank"><b>Despre localStorage</b></a>
+                <p>Daca utilizatorul s-a conectat cu succes salvati in LocalStorage datele despre utilizator si ascundeti formularul de login (puteti sa folositi display:none)</p>
+                <p>Va exista un buton de Logout care sterge din local storage informatiile despre utilizator si afiseaza din nou formularul de login</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  Footer -->
+
+
+    <section class="footer fixed-bottom">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="container">
+                            <p class="text-center" style="color: white">Copyright &copy; 2019 Alexandru Tapirdea.
+                                All
+                                Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/superfish.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+</body>
+</html>

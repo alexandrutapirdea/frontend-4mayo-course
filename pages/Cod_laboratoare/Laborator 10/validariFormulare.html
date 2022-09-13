@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    form{
+        background-color: darkorange;
+        position: relative;
+        max-width: 50vw;
+        border: 5px solid black;
+        padding: 2%;
+    }
+    body{
+        background-color: #8b0806;
+    }
+
+    .white-bold{
+        color: white;
+        font-weight: bold;
+        margin-left: 3%;
+        width: 70%;
+    }
+    .values{
+
+         }
+
+    .area
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+    }
+    .wow{
+        font-size: 25px;
+        color: #2aabd2;
+    }
+</style>
+<body>
+<div id="cerinte">
+    <h1 class="white-bold">Cerinte:</h1>
+    <h2 class="white-bold">Explicatii importante:</h2>
+    <p class="white-bold">Toate cerintele de aici se vor rezolva cu Javascript</p>
+    <p class="white-bold">Nu se vor face modificari in fisierul HTML decat daca este neaparata nevoie</p>
+    <p class="white-bold">Laboratorul asta incercati sa va descurcati singuri. Cautati pe internet, intrebati un coleg etc. Eu o sa va raspund doar daca nu ati gasit singuri solutia dupa ce ati incercat</p>
+    <p class="white-bold wow">Cine rezolva toate cerintele corect are un bonus de 0.5 la activitatea pe laborator (din 1pct posibil in total)</p>
+    <p class="white-bold wow">Cine rezolva jumatate din cerinte corect are un bonus de 0.25 la activitatea pe laborator (din 1pct posibil in total)</p>
+    <p class="white-bold wow">Daca ceva nu merge, verificati in consola ce mesaj de eroare primiti ( F12 -> Console sau click dreapta Inspect Eelement)</p>
+    <h3 class="white-bold">Generale:</h3>
+    <ol class="white-bold">
+        <li>Folositi JAVASCRIPT ca sa adaugati un paragraf pentru descriere in div-ul cu id-ul "descriere-formular". In paragaf o sa scrie ce vreti voi</li>
+         <li>Creati o functie in javascript care se activeaza la fiecare 5 secunde si schimba culoarea de fundal intr-o culoare random</li>
+         <li>Adaugati un buton cu textul "Vreau culoarea asta".Butonul opreste schimbarea culoarii</li>
+        <li>Selectati toate elementele cu tagul &lt;li> din pagina si afisati numarul lor  </li>
+        <li>Creati cu JavaScript un buton pe care scrie "Ascunde cerinte".La click pe buton:
+            <ul>
+            <li>Daca cerintele sunt vizibile in pagina, ascunde-le (seteaza display:none pentru div-ul cu id-ul "area")</li>
+            <li>Daca cerintele NU sunt vizibile in pagina, afiseaza-le (seteaza display:"" pentru div-ul cu id-ul "area")</li>
+        </ul></li>
+        <li>La apasarea tastei ESC se va intra in mod de pauza(ca in jocuri). Explicatie: General un div de culoarea neagra, cu opacitate 0.6 care sa acopere toata pagina.(si sa nu ne lase sa dam click pe nimic).
+        Daca se apasa ESC din nou se "revine din pauza"</li>
+    </ol>
+    <h3 class="white-bold">Formular:</h3>
+    <ol class="white-bold">
+        <li>Adaugati o functie care prinde evenimentul de click pe butonul de Submit. La click pe buton se vor afisa in partea dreapta valorile din input-uri.</li>
+        <li>In momentul de fata input-ul de tip <i>Select (an de studiu)</i> are doar valorile 1 si 2. Adaugati din Javascript si optiunile 3 si 4 <span class="attention">OBS: Nu le adaugati direct in HTML</span></li>
+        <li>Verificati din javascript daca exista input-uri necompletate. Daca da, pagina isi schimba culoarea in rosu. Daca toate campurile sunt completate, pagina isi schimba culoarea in verde</li>
+        <li>La incarcarea paginii, butonul de "Submit" trebuie sa fie dezactivat(are opacitate 0.5, nu se intampla nimic la click, iar la hover apare iconita cu "X" in loc de mouse).</li>
+        <li>Butonul de submit se reactiveaza cand checkbox-ul este bifat. ( si se dezactiveaza cand este debifat din nou checkbox-ul).</li>
+        <li>Daca se apasa pe butonul de reset, mai intai va fi intrebat utilizatorul printr-un confirm daca vrea intr-adevar sa reseteze formularul, si, daca da, se reseteaza, iar daca raspunde nu, nu se reseteaza.</li>
+        <li>Citeste despre expresii regulate si creeaza urmatoarele validari:
+            <ul>
+                <li>Email-ul are forma de email</li>
+                <li>Parola contine cel putin 8 caractere , din care cel putin o litera mare si un numar. Exemple de parole valide: Test1234 ; Test12344556778843 ; aBCD123W</li>
+            </ul>
+        </li>
+        <li>Pentru input-ul de tip Range se va afisa valoarea in partea dreapta la fiecare modificare( vezi event-ul onChange) </li>
+        <li>La apasarea tastei enter se apeleaza aceeasi functie ca la click pe butonul submit</li>
+    </ol>
+    <h3 class="white-bold">AJAX:</h3>
+    <ol class="white-bold">
+        <li>Vrem sa cerem  o lista cu poze de la server. Fa un request AJAX catre: https://jsonplaceholder.typicode.com/photos</li>
+        <li>Afiseaza fiecare poza in pagina, impreuna cu titlul corespunzator (titlul setat ca proprietate title, nu ca paragraf). OBS: Se vor afisa chiar ca imagini, folosind tag-ul img</li>
+    </ol>
+    <h3 class="white-bold">Local storage:</h3>
+    <ol class="white-bold">
+        <li>Daca formularul a trecut de validari, salvati in local storage adresa de email si anul de studiu al studentului.</li>
+        <li>Daca exista in local storage salvate adresa de email/anul de studiu, atunci formularul nu se mai afiseaza, dar se afiseza aceste informatii ( ca si cum utilizatorul este deja logat).</li>
+        <li> Se creeaza un buton din Javascript cu textul "Sterge datele de logare". La click pe buton se sterg valorile salvate in local storage</li>
+    </ol>
+</div>
+
+
+<div class="area">
+<form>
+    <h3>Formular pentru studenti</h3>
+<div id="descriere formular">
+
+</div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+        <div class="form-group">
+            <label for="formControlRange">Example Range input</label>
+            <input type="range" class="form-control-range" id="formControlRange" min="18" max="24">
+        </div>
+    <div class="form-group">
+        <label for="exampleFormControlSelect1">Anul de studiu</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+
+        </select>
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="button" class="btn btn-primary" id="submit">Submit</button>
+    <button type="button" class="btn btn-danger" id="reset">Reset</button>
+    </div>
+</form>
+    <div class="white-bold values">
+        <h1 class="white-bold ">Valori din input</h1>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="validariFormulare.js"></script>
+</body>
+</html>

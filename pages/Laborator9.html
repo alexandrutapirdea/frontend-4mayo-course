@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2020
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        hr {
+            display: block;
+            height: 0px;
+            border: 2px solid blueviolet;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+
+        @media print {
+            div.punctaj {
+                position: relative !important;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="./Laborator2.html">Laborator 3</a></li>
+                                <li><a href="Laborator4.html">Laborator 4</a></li>
+                                <li><a href="Laborator5.html">Laborator 5</a></li>
+                                <li><a href="./Laborator6.html">Laborator 6</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="./Laborator9.html">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                <li><a href="./Laborator10_NodeJS.html">Laborator
+                                        10_Node</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                    <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+
+            <div class="message">
+                <h2>Laborator 9</h2>
+
+                <h3>Cuprins:</h3>
+                <ol>
+                    <li>Recapitulare - Apeluri AJAX (GET,POST,PUT,DELETE + HTTP status codes)</li>
+                    <li>Conceptul de promise</li>
+                    <li>Ce este un API ?</li>
+                    <li>Legatura dintre frontend, backend si baze de date</li>
+                    <li>Prezentarea unei aplicatii pentru adoptia de animale - Frontend + Backend</li>
+                    <ul>
+                        ES6
+                        <li>async await (ES7) VS then</li>
+                        <li>Map, filter + arrow function + exemplu aplicat pentru stergerea unui obiect dupa id</li>
+                        <li>template literals</li>
+                        <li>Property Value Shorthand</li>
+                    </ul>
+                    <li>Node.js + Express framework</li>
+                    <li>Despre npm : cum instalam pachete, cum alegem o versiune anume si unde citim cum functioneaza un
+                        pachet</li>
+                    <li>Prezentarea unor pachete de npm utile: nodemon, body-parser, uid, cors</li>
+                    <li>Despre CORS; Citisi si aici <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">In
+                            detaliu despre
+                            cors (optional; e un concept destul de avansat pentru laborator)</a></li>
+                    <li>Tab-ul network pentru debbuging</li>
+                    <li>Utilizare Postman pentru testarea unui API - foarte folosit in domeniu (nu e doar pentru
+                        node.js, ci orice API)</li>
+                </ol>
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h1>NodeJS</h1>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xtMOl9MNdTg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/W6rg68PdQTg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zChw1EE5Ai0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/EEzVtZOWdZo" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <h2>Codul sursa:</h2>
+                <a href="https://drive.google.com/open?id=1w5Ygfs_8qTAKNVhNRibYQ9kTOzd7J0jk" target="_blank">Codul
+                    pentru aplicatia din video</a>
+
+
+                <h2>Descrierea temei pentru proiect</h2>
+                <p class="observatie">
+                    Va rog sa va ganditi la tema pentru proiectul de Node&JS si sa completati formularul pe mai jos.
+                    Spre deosebire de primul proiect, la acest proiect o sa aveti mult de lucru. Personal, nu cred ca
+                    reusiti in mai putin de o saptamana, presupunand ca vreti o nota buna :)
+                </p>
+                <p>Proiectul o sa fie prezentat intr-o comisie de 2 persoane si o sa primiti intrebari din el. ( deci e
+                    important sa intelegeti cum functioneaza tot ce scrieti)</p>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfRLsxe7zZI37S3pbCHwNhd8YIaRUC_6dv65dbbILLUvAb1TQ/viewform?embedded=true"
+                    width="1200" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+
+            <!--  Footer -->
+
+
+            <section class="footer fixed-bottom">
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="container">
+                                    <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru
+                                        Tapirdea.
+                                        All
+                                        Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/superfish.min.js"></script>
+            <script src="../js/wow.min.js"></script>
+            <script src="../js/custom.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>

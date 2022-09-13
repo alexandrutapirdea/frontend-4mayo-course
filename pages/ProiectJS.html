@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="utf-8">
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <title>
+
+
+
+        Laborator Tehnici Web - FMI 2020
+
+
+
+    </title>
+
+
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+
+
+
+    <!-- Bootstrap & Styles -->
+
+
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+
+
+    <link href="../css/style.css" rel="stylesheet">
+
+
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+
+
+    <link href="../css/outline.css" rel="stylesheet">
+
+    <link href="../css/custom-style.css" rel="stylesheet">
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+
+
+            var valoarePunctaj = document.getElementById("valoare-punctaj");
+
+            console.log("valoare-punctaj", valoarePunctaj);
+
+
+
+            var touchLi = document.querySelectorAll("div.cerinte li");
+
+            console.log(touchLi);
+
+            touchLi.forEach(function (li) {
+
+                console.log("li este", li);
+
+
+
+                li.addEventListener("click", function (event) {
+
+                    console.log("li este", li);
+
+                    if (event.target !== this)
+
+                        return;
+
+                    if (li.classList.contains("li-disabled")) {
+
+
+
+                        li.classList.remove("li-disabled");
+
+
+
+                        var select = li.querySelector(':scope select');
+
+                        console.log("children", select);
+
+                        var selectValue = 1;
+
+                        if (select) {
+
+                            selectValue = select.options[select.selectedIndex].value;
+
+                            select.removeAttribute("disabled");
+
+                        }
+
+
+
+                        var valueToAdd = parseFloat(li.children[1].innerHTML) * selectValue;
+
+                        valoarePunctaj.innerHTML = (parseFloat(valoarePunctaj.innerHTML) - valueToAdd).toFixed(2);
+
+                    }
+
+                    else {
+
+
+
+                        li.classList.add("li-disabled");
+
+                        var select = li.querySelector(':scope select');
+
+                        console.log("children", select);
+
+                        var selectValue = 1;
+
+                        if (select) {
+
+                            selectValue = select.options[select.selectedIndex].value;
+
+                            select.setAttribute("disabled", true);
+
+                        }
+
+                        var valueToAdd = parseFloat(li.children[1].innerHTML) * selectValue;
+
+                        valoarePunctaj.innerHTML = (parseFloat(valoarePunctaj.innerHTML) + valueToAdd).toFixed(2);
+
+
+
+                    }
+
+                });
+
+            });
+
+
+
+            var items = document.querySelectorAll("li span:nth-child(2)");
+
+            var listaItems = Array.from(items);
+
+            console.log("items este", items)
+
+            var punctaje = listaItems.map(function (elem) {
+
+                return parseFloat(elem.innerHTML)
+
+            })
+
+            console.log("punctaje", punctaje)
+
+        });
+
+
+
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <div class="punctaj">
+
+        <h1 style="color:white; margin-left:10%">Punctaj</h1>
+
+        <p id="valoare-punctaj">0.00</p>
+
+    </div>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="row" class="collapse navbar-collapse">
+
+            <div class="col-sm-3">
+
+                <div class="logo">
+
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+
+                <nav id="desktop-menu">
+
+                    <ul class="sf-menu" id="navigation">
+
+                        <li><a href="../index.html">Acasa</a>
+
+                        <li><a href="./Notare.html">Notare</a>
+
+                        </li>
+
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+
+                            <ul class="dropdown-ul">
+
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+
+                                <li><a href="Laborator3.html">Laborator 3</a></li>
+
+                                <li><a href="./Laborator4.html">Laborator 4</a></li>
+
+                                <li><a href="Laborator5.html">Laborator 5</a></li>
+
+                                <li><a href="Laborator6.html">Laborator 6</a></li>
+                                <li><a href="Laborator7.html">Laborator 7</a></li>
+
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+
+                                <li><a href="Laborator9.html">Laborator 9</a></li>
+
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                </li>
+                                <li><a href="./Laborator10_NodeJS.html">Laborator
+                                        10_Node</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+
+                        <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                        <li class="observatie"><a href="./restanta.html" class="observatie"
+                                style="color:red; font-weight: bold;">Restanta</a></li>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="row">
+
+
+
+        <div class="col-sm-12 center-block">
+
+
+
+            <div style="text-align: center">
+
+                <h2>Proiect Javascript</h2>
+
+            </div>
+
+            <div class="message">
+
+                <p>Proiectul se va preda cel tarziu in <span class="bold">Marti,19 MAI, ora 23:59</span></p>
+
+                <p class="observatie">De data asta nu vor putea exista amanari mai mult de cateva zile pentru ca se
+                    termina semestrul si trebuie sa avem notele finalizate. </p>
+
+
+                <p class="observatie">Puteti fie sa adaugati functionalitati peste proiectul initial, fie sa realizati
+                    un joc. Pentru joc va recomand sa NU folositi canvas. O sa vedeti multe tutoriale in care se
+                    foloseste,
+                    dar nu intra pentru examen. Puteti sa folositi daca vreti, dar sa aveti asta in vedere. </p>
+
+                <p class="observatie"></p>
+
+                <p class="observatie">Cine vrea sa faca joc trebuie sa discute cu mine inainte de vacanta "ca sa
+                    negociem tema".( sa nu va alegeti X si O pe care il gasiti la prima cautare pe net)
+                </p>
+
+                <p>Puteti preda proiectul si mai devreme, dar trebuie sa respecte cerintele eliminatorii</p>
+                <p>Cine vrea feedback partial pe ce a lucrat deja trebuie sa-mi trimita proiectul pana pe 15 MAI, ora
+                    23:59</p>
+
+                <h2>Cerinte proiect</h2>
+
+                <p>Exista 2 tipuri de cerinte :</p>
+
+                <ul>
+
+                    <li><span class="observatie">Eliminatorii</span> - nu se prezinta proiectul fara ele; Sunt notate cu
+                        rosu</li>
+
+                    <li><span class="bold">Recomandate</span> - va ajuta sa acumulati puncte; Puteti prezenta si fara
+                        ele</li>
+
+                </ul>
+
+                <h2 class="observatie"> Punctaj toatal proiectul de Javascript -- 2 puncte</h2>
+
+                <div class="cerinte">
+
+                    <h2 style="background-color:#acbdee">Generale - fara punctaj, dar sunt eliminatorii</span></h2>
+
+                    <ol>
+
+                        <li class="observatie">Codul pus pe github. Daca nu aveti deja un cont, trebuie sa va faceti
+                            unul (dureaza 5 minute si este gratuit).
+
+                            <a href="https://github.com/">Github</a>
+
+                        </li>
+
+                        <li class="observatie">Cate un fisier JS extern pentru fiecare pagina. Puteti avea si un fisier
+                            comun, daca sunt functii care se repeta
+
+                        </li>
+
+                        <li class="observatie">Validarea codului Javascript (sa nu aveti erori in consola; ex:
+                            numeVariabila is not defined)
+
+                        </li>
+
+                        <li class="observatie">Sa adaugati comentarii in cod si sa aveti un cod "bine scris"(fara
+                            variable care se numesc a,b,c, codul care se repeta pus in functii etc).
+                        </li>
+
+                        <p>Gasiti pe internet mai multe ghiduri care explica standardele folosite in industrie, cele mai
+                            populare fiind cele introduse de GitHub, Google sau AirBnB.</p>
+
+                        <p><a
+                                href="https://codeburst.io/5-javascript-style-guides-including-airbnb-github-google-88cbc6b2b7aa">Articol
+                                detaliat</a></p>
+
+                        <a href="https://www.crockford.com/code.html">Varianta simplificata</a>
+
+                    </ol>
+
+
+
+                    <h2 style="background-color:#acbdee">Structuri de date <span
+                            style="font-size: 30px;">&#x2192;</span> <span style="color:limegreen"> 0.15p</span></h2>
+
+                    <ol>
+
+                        <li class="observatie">Sa folositi Array cu metodele: push, pop, concat, sort
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.025p</span>
+
+                            <select>
+
+                                <option value="1">1</option>
+
+                                <option value="2">2</option>
+
+                                <option value="3">3</option>
+
+                                <option value="4">4</option>
+
+                            </select>
+
+
+                        </li>
+
+                        <li>Sa va modelati datele sub forma de obiecte ( ex: obiectul telefon cu "denumire", "pret",
+                            "comerciant") si/sau array de obiecte (ex: array de obiecte de tip produs)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+
+                    </ol>
+
+
+
+                    <h2 style="background-color:#acbdee">Formulare<span style="font-size: 30px;">&#x2192;</span> <span
+                            style="color:#000000"> F.importante <span style="color:limegreen">0.6</span></span></h2>
+
+                    <ol>
+
+                        <li class="observatie">Utilizarea unui formular de register cu urmatoarele tipuri de input:
+                            (text,email,password,select,checkbox,radio button, range). Trebuie sa preluati valorile din
+                            input-uri folosind javascript si sa faceti ceva cu ele.
+                            (cel putin sa le afisati pe toate, daca nu le folositi pe toate la register/login)
+
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.01p</span>
+
+                            <select>
+
+                                <option value="1">1</option>
+
+                                <option value="2">2</option>
+
+                                <option value="3">3</option>
+
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+
+                            </select>
+                        </li>
+
+                        <li class="observatie">Validari folosind regex (expresii regulate)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+
+                            Recomand videoclipurile astea. Dureaza ~ o ora in total, dar invatati un concept pe care o
+                            sa-l folositi cu siguranta la job(sau licenta sau alte proiecte)
+
+                            <a href="https://www.youtube.com/playlist?list=PL55RiY5tL51ryV3MhCbH8bLl7O_RZGUUE">Link
+                                aici</a>
+
+                            <p>Aici o sa aloc punctaj proportial cu complexitatea.Daca de exemplu verificati doar ca
+                                parola contine 8 caractere primiti punctajul minim, iar daca
+
+                                verificati sa contina si litera mica, litera mare, un numar si un caracter special -
+                                primiti punctaj mai mare.</p>
+
+                        </li>
+
+                        <li> Afisarea mesajelor de eroare folosind o librarie.
+
+                            Exemplu(dar puteti folosi orice altceva):
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                            <a href="https://sweetalert2.github.io/">SweetAlert2</a>
+
+                        </li>
+
+                        <li>
+
+                            Realizarea validarilor "in timp real" (ex: de fiecare data cand scriu o litera in campul
+                            pentru email")
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.02p</span>
+
+                        </li>
+
+                        <li>
+
+                            Modificarea dinamica a aspectului site-ului din "setari" ( ex: utilizatorul alege culoarea
+                            de fundal sau marimea scrisului printr-un formular si pagina se modifica in concesinta).
+                            Aici puteti face si un "dark mode"
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.2p</span>
+
+                        </li>
+
+                    </ol>
+
+
+
+                    <h2 style="background-color:#acbdee">AJAX si Node.js</h2>
+
+                    <ol>
+
+
+
+                        <li class="observatie">Realizarea de apeluri ajax catre un API creat in Node.js.
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.15p</span>
+
+                        </li>
+
+                        <li>Crearea unui API simplu in Node.js care implementeaza CRUD (Create, Read, Update, Delete).
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1 pt fiecare metoda( Create, Read, Update, Delete)</span>
+
+                            <select>
+
+                                <option value="1">1</option>
+
+                                <option value="2">2</option>
+
+                                <option value="3">3</option>
+
+                                <option value="4">4</option>
+
+                            </select>
+                            Exemplu: Am o librarie online.
+                            <ul>
+                                <li class="observatie">Create - adaugam o carte noua (nu trebuie salvata in baza de
+                                    date, dar o putem salva
+                                    intr-un fisier sau intr-un array pe server)
+                                </li>
+                                <li class="observatie">Read - citim toate cartile din fisier (inclusiv pe cele pe care
+                                    le-am adaugat mai
+                                    devreme)</li>
+                                <li>Update - actualizam datele despre o anumita carte (ex: titlul, autorul, anul
+                                    publicarii etc)</li>
+                                <li>Delete - stergem o carte din fisier/array</li>
+                            </ul>
+                            OBS: Obligatoriu sa aveti cel putin create si read; Update si delete sunt optionale, dar nu
+                            sunt grele
+
+                        </li>
+
+                        <li class="observatie">Pagina pentru eroarea 404.
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+
+                            Ex: Vreau sa intru pe https://aplicatiaMea/calculatorPensie , dar nu exista pagina
+                            "calculatorPensie"
+                            si imi apare o pagina stilizata pentru eroarea 404.
+                            <a href="https://uxplanet.org/404-page-design-not-found-how-to-create-great-error-pages-cfc43c4fa95f"
+                                target="_blank">Articol despre eroarea 404</a>
+                        </li>
+                        <li>Template-uri (de exemplu realizate cu EJS)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.2p</span>
+
+                            Urmariti urmatorul video ca exemplu:
+                            <a href="https://www.youtube.com/watch?v=3Jz18kXCLwg" target="_blank">Introduction To
+                                EJS</a>
+                        </li>
+
+                    </ol>
+
+                    <h2 style="background-color:#acbdee">Evenimente de click si taste apasate <span
+                            style="font-size: 30px;">&#x2192;</span> <span style="color:limegreen">0.25</span></h2>
+
+                    <ol>
+
+                        <li>Functii care asculta pentru click (ex: click pe butonul de "adauga in cos")
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Folosirea metodei preventDefault (undeva unde este nevoie, nu doar ca sa fie).
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Functii care asculta pentru taste apasate(ex: trimiterea formularul de login la ENTER sau
+                            pauza unui joc la ESC)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li class="observatie">setTimeout, setInterval, clearInterval
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.025p</span>
+
+                            Folosite cu sens, nu doar "ca sa fie". Daca aveti de exemplu doar setTimeout se acorda 1/3
+                            din punctaj.
+
+                            <select>
+
+                                <option value="1">1</option>
+
+                                <option value="2">2</option>
+
+                                <option value="3">3</option>
+
+                            </select>
+                        </li>
+
+                    </ol>
+
+
+
+
+
+                    <h2 style="background-color:#acbdee">Altele <span style="font-size: 30px;">&#x2192;</span> <span
+                            style="color:limegreen">0.6</span></h2>
+
+                    <ol>
+
+                        <li style="text-align: justify">
+
+                            Filtrarea dupa anumite caracteristici (ex: la magazin dupa pret sau producator, la carti
+                            dupa autor, la masini etc)
+                            Ex: Daca intrati pe Emag, puteti sa vedeti toate produsele din categoria laptop.
+                            Acolo, puteti sa afisati de exemplu doar laptop-urile cu 16GB RAM.
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+
+                        </li>
+
+                        <li style="text-align: justify" class="observatie">
+
+                            Manevrarea DOM-ului (selectare dupa id, tag, clasa);
+                            Exemplu: Apas pe butonul "cumpara" si vad in pagina cum scade cantitatea produsului cu 1 si
+                            produsul apare in cosul de cumparaturi.(nu neaparat o pagina separat pentru cos de
+                            cumparaturi, dar sa se vada "vizual ca s-a intamplat ceva")
+                            Ex 2: dau click pe "adauga favorite" si langa imaginea cu produsul apare o stea galbena.
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li style="text-align: justify" class="observatie">
+
+                            Creare/Stergere de elemente;
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Folosirea unui librarii de npm
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+
+                            <a href="https://blog.teamtreehouse.com/install-node-js-npm-windows">Instalare Node.JS +
+                                npm</a>
+
+                            Folosire = chiar sa o folositi pentru ceva, nu doar sa o instalati.
+
+                            Exemple:
+
+                            <a href="https://www.npmjs.com/package/animate.css?activeTab=readme">Librarie pentru
+                                animatii</a>
+
+                            <a href="https://www.npmjs.com/package/randomcolor">Generator de numere random</a>
+
+                            <a href="https://www.npmjs.com/package/js-datepicker">Calendar/DatePicker</a>
+
+                        </li>
+
+                        <li class="observatie">Local Storage : Folositi setItem, getItem, removeItem, clear etc..
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+
+                            Exemplu de folosire: Retin daca utilizatrul este logat sau nu. Daca da, nu mai afisam
+                            ecranul de login, ci o pagina unde scrie "Bun venit X" (unde X este numele de utilizator)
+
+                        </li>
+
+                        <li>Folosirea a cel putin unui element audio incarcat dinamic (adica din Javascript, NU din
+                            HTML)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Folosirea a cel putin unui element video incarcat dinamic (adica din Javascript, NU din
+                            HTML)
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Math.random(), parseInt/parseFloat
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                        <li>Formulati propria cerinta si rezolvati-o
+
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+    <!--  Footer -->
+
+
+
+
+
+    <section class="footer fixed-bottom">
+
+        <div class="copyright">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+                        <div class="container">
+
+                            <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru Tapirdea.
+
+                                All
+
+                                Rights Reserved.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="../js/jquery.min.js"></script>
+
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/superfish.min.js"></script>
+
+    <script src="../js/wow.min.js"></script>
+
+    <script src="../js/custom.js"></script>
+
+
+
+</body>
+
+</html>

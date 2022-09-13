@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2020
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/print.css" media="print">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+
+            var valoarePunctaj = document.getElementById("valoare-punctaj");
+
+            var touchLi = document.querySelectorAll("div.cerinte li");
+            touchLi.forEach(function (li) {
+
+                li.addEventListener("click", function (event) {
+                    if (event.target !== this)
+                        return;
+                    if (li.classList.contains("li-disabled")) {
+
+                        li.classList.remove("li-disabled");
+
+                        var select = li.querySelector(':scope select');
+                        console.log("children", select);
+                        var selectValue = 1;
+                        if (select) {
+                            selectValue = select.options[select.selectedIndex].value;
+                            select.removeAttribute("disabled");
+                        }
+
+                        var valueToAdd = parseFloat(li.children[1].innerHTML) * selectValue;
+                        valoarePunctaj.innerHTML = (parseFloat(valoarePunctaj.innerHTML) - valueToAdd).toFixed(2);
+                    }
+                    else {
+
+                        li.classList.add("li-disabled");
+                        var select = li.querySelector(':scope select');
+                        var selectValue = 1;
+                        if (select) {
+                            selectValue = select.options[select.selectedIndex].value;
+                            select.setAttribute("disabled", true);
+                        }
+                        var valueToAdd = parseFloat(li.children[1].innerHTML) * selectValue;
+                        valoarePunctaj.innerHTML = (parseFloat(valoarePunctaj.innerHTML) + valueToAdd).toFixed(2);
+
+                    }
+                });
+            });
+
+            var items = document.querySelectorAll("li span:nth-child(2)");
+            var listaItems = Array.from(items);
+            var punctaje = listaItems.map(function (elem) {
+                return parseFloat(elem.innerHTML)
+            })
+
+            var submit = document.querySelector("#submit");
+            var detaliiNotare = document.querySelector("#detalii-notare");
+            var numeStudent = document.querySelector("#nume-student");
+            var observatii = document.querySelector("textarea");
+            var feedback = document.querySelector("#feedback");
+            var titlu = document.querySelector("#titlu");
+
+
+            submit.addEventListener("click", function () {
+
+                console.log(numeStudent.value)
+                console.log(observatii.value)
+
+                var h2 = document.querySelector("#nume");
+                h2.innerHTML = "Student: " + numeStudent.value;
+
+                var p = document.querySelector("#explicatii-nota");
+                p.innerHTML = observatii.value;
+
+                detaliiNotare.style.display = "none";
+
+                titlu.innerHTML = "Proiect HTML&CSS - Raport"
+            });
+
+        });
+
+
+
+
+    </script>
+
+    <style>
+        textarea {
+            width: 50vw;
+            height: 30vh;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="punctaj">
+        <h1 style="color:white; margin-left:10%">Punctaj</h1>
+        <p id="valoare-punctaj">0.00</p>
+    </div>
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="Laborator3.html">Laborator 3</a></li>
+                                <li><a href="./Laborator4.html">Laborator 4</a></li>
+                                <li><a href="Laborator5.html">Laborator 5</a></li>
+                                <li><a href="Laborator6.html">Laborator 6</a></li>
+                                <li><a href="Laborator7.html">Laborator 7</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="#">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                <li><a href="./Laborator10_NodeJS.html">Laborator
+                                        10_Node</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                    <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                    <li class="observatie"><a href="./restanta.html" class="observatie"
+                            style="color:red; font-weight: bold;">Restanta</a></li>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+            <div style="text-align: center">
+                <div id="raport-notare">
+                    Nume student: <input type="text" id="nume-student" />
+                    <br />
+                    Observatii: <textarea></textarea>
+                    <br />
+                    <button id="submit">Submit</button>
+
+                </div>
+                <h2 id="titlu">Proiect HTML + CSS</h2>
+            </div>
+            <div class="message">
+                <div id="detalii-notare">
+                    <p>Proiectul se va preda cel tarziu in <span class="bold">laboratorul 8: 6-10 aprilie </span></p>
+                    <p>Puteti preda proiectul si mai devreme, dar trebuie sa respecte cerintele eliminatorii</p>
+                    <p>Dupa data de 10 aprilie, proiectele trimise cu intarziere pot primi MAXIMUM 0.5puncte (50% din
+                        punctajul initial)</p>
+                    <p>UPDATE: Pentru trimiterea proiectelor, va rog sa folositi github si sa-mi trimiteti link catre
+                        proiect</p>
+                    <h2>Cerinte proiect</h2>
+                    <p>Exista 2 tipuri de cerinte :</p>
+                    <ul>
+                        <li><span class="observatie">Eliminatorii</span> - nu se prezinta proiectul fara ele; Sunt
+                            notate cu
+                            rosu</li>
+                        <li><span class="bold">Recomandate</span> - va ajuta sa acumulati puncte; Puteti prezenta si
+                            fara
+                            ele</li>
+                    </ul>
+                    <h2 class="observatie"> Punctaj toatal proiect HTML si CSS -- 1 punct</h2>
+                </div>
+                <div id="feedback">
+                    <h2 id="nume"></h2>
+                    <p id="explicatii-nota"></p>
+                </div>
+                <div class="cerinte">
+                    <h2 style="background-color:#acbdee">Generale <span style="font-size: 30px;">&#x2192;</span> <span
+                            style="color:limegreen">Nu au punctaj, dar sunt obligatorii</span></h2>
+                    <ol>
+                        <li class="observatie">Fisier CSS extern (NU stil inline sau intern)
+                        </li>
+                        <li class="observatie">Sa aveti minim 4 pagini HTML (ex: Contact, Despre Noi, Produse, Oferte
+                            speciale etc)
+                        </li>
+                    </ol>
+
+                    <h2 style="background-color:#acbdee">HTML</h2>
+                    <ol>
+                        <li class="observatie">Folosirea tag-urilor: h1,h2...h6,p,img,audio,a,span,ul,ol,li,tabel,iframe
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+                        </li>
+                        <li>Incarcarea unui favicon
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.015p</span>
+                        </li>
+                        <li class="observatie">Validarea HTML (fara erori si fara warning-uri)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.015p</span>
+                        </li>
+                    </ol>
+
+                    <h2 style="background-color:#acbdee">CSS<span style="font-size: 30px;">&#x2192;</span> <span
+                            style="color:#000000"> Depinde de cati selectori folositi; <span
+                                style="color:limegreen">0.25 - 0.6</span></span></h2>
+                    <ol>
+                        <li class="observatie">Meniu dropdown
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+                        </li>
+                        <li class="observatie">CSS VALID -
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.015p</span>
+                            <a href="https://jigsaw.w3.org/css-validator/#validate_by_input">CSS Validtor</a>
+                        </li>
+                        <li> Utilizarea animatiilor din CSS
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p </span><span>pentru fiecare animatie distincta(chiar sa fie diferita, nu doar o
+                                alta culoare sau diferent f.f mici).
+                                Se poate obtine cel mult 0.1 pentru animatii in total
+                            </span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </li>
+                        <li> Selectori diferiti de CSS ( dupa tag, clasa, id, copil al unui alt element, copil direct,
+                            al n-lea copil de tipul unui tag etc
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.01p pentru fiecare selector diferit</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </li>
+                        <li> Proprietati CSS de folosit: (sunt exemple, puteti folosi si alte proprietati): width,
+                            height, color, background, font-size, border, padding, margin, display, overflow, z-index
+                            etc ; Maxim 0.1p in total
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.005 pentru fiecare proprietate folosita</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                            </select>
+                        </li>
+
+                    </ol>
+
+                    <h2 style="background-color:#acbdee">Responsive (sa arate bine pe diferite dimensiune de ecran,
+                        inclusiv tableta/telefon) <span style="font-size: 30px;">&#x2192;</span> <span
+                            style="color:limegreen">0.35</span></h2>
+                    <ol>
+                        <li class="observatie">Media query pentru dimensiuni mari, medii si mici de ecran (adica sa
+                            aveti 3 @media, destul de diferite intre ele; ex: ascunde elemente la dimensiune de telefon,
+                            schimbati dimensiunea scrisului etc; NU doar o culoare de fundal)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.2p</span>
+                        </li>
+                        <li>Folosire rem, em, procentaje, vh, vw - dupa necesitat
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.005 pt fiecare unitate de masura</span>
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </li>
+                    </ol>
+                    <h2 style="background-color:#acbdee">Altele</h2>
+                    <ol>
+                        <li style="text-align: justify">structurarea proiectului in foldere (imaginile intr-un folder de
+                            imagini, stilurile intr-un folder de stiluri, videoclipurile
+                            intr-un folder de videoclipuri, scripturile intr-un folder de scripturi etc.).
+                            CSS-ul sa fie impartit in mai multe fisiere( CSS general, CSS pentru paginile speciale,
+                            CSS pentru diverse media cum ar fi cel pentru printare). Toate fisierele sa aiba nume
+                            sugestive
+                            (de exemplu stil_general.css, home.css, stil_general_media_700_1000.css)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                        <li>Formular de contact sau Login (utilizare input-uri cu type diferit; ex: input text,
+                            password, email, select, textarea, color etc)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                        <li> folosirea codurilor html pentru caractere speciale &cod; ex: pentru "mai mare sau egal",
+                            "sageata" / ce simboluri vreti
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.02p</span>
+                        </li>
+                        <li> folosirea unui font custom pentru scris
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.03p</span>
+                            <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.asp"
+                                target="_blank">Exemplu</a>
+                        </li>
+                        <li> Utilizare CSS flex
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                        <li> Utilizare CSS grid
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.1p</span>
+                        </li>
+
+                        <li>Introducerea de butoane catre facebook, twitter
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                        <li>Adaugarea site-ului pe net (exita destule variante gratuite; cauti pe net sau ma puteti
+                            intreba oricand si va explic)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                        <li>Folosirea Boostrap intr-o pagina ( !! Atentie - este permis intr-o singura pagina, nu puteti
+                            face tot proiectul folosind Bootrstap)
+                            <span style="font-size: 30px; color:black">&#x2192;</span> <span style="color:limegreen">
+                                0.05p</span>
+                        </li>
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--  Footer -->
+
+
+    <section class="footer fixed-bottom">
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="container">
+                            <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru Tapirdea.
+                                All
+                                Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/superfish.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2020
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="./Laborator2.html">Laborator 3</a></li>
+                                <li><a href="Laborator4.html">Laborator 4</a></li>
+                                <li><a href="Laborator5.html">Laborator 5</a></li>
+                                <li><a href="Laborator6.html">Laborator 6</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="#">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                        <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+
+            <div style="text-align: center">
+                <h2>Laborator 5</h2>
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h2>Javascript - Introducere</h2>
+                <p>Pana acum am folosit HTML ca sa definim structura unei pagini si CSS pentru modul in care site-ul
+                    arata.</p>
+                <p>Javascript este un limbaj de programare pe care il folosim ca sa adaugam interactiune(sa facem
+                    site-ul dinamic).</p>
+                <div>
+                    <h3>Site web vs Aplicatie Web</h3>
+
+                    <p>Este important sa facem urmatoarea distinctie:</p>
+                    <ul>
+                        <li>Site web - este static, de prezentare. (poti doar sa vezi un continut, care este de fiecare
+                            data acelasi). Ex: site cu recenzii despre carti</li>
+                        <li>Aplicatie web - este complexa, interactiva. (ex: facebook, trello, emag etc)</li>
+                    </ul>
+                </div>
+
+                <div>
+
+                    <h2>Cum folosim JavaScript intr-o pagina web?</h2>
+                    In fisierul nostru HTML, la final de body, "legam" script-ul, specificand sursa
+                    <pre class="prettyprint lang-js linenums">
+                    // la fel ca la CSS, proprietatea src este "calea" catre fisier
+                          &#60;script src="myscripts.js">&#60;/script> 
+
+                    </pre>
+
+                    <p class="observatie">Trebuie sa adaugam script-ul la final de body pentru ca vom interactiona cu
+                        elementele din pagina.
+                        Daca am adauga script-ul in head sau la inceput de body, este posibil ca elementele sa nu existe
+                        in pagina cand rulam script-ul
+                    </p>
+                    <h2>Afisarea mesajelor</h2>
+                    <pre class="prettyprint lang-js linenums">
+                        // Afisarea unui pop-up 
+                        alert("Acesta este un mesaj")
+
+                        // Afisarea mesajelor in consola:
+                        console.log("Mesaj in consola");
+                        
+                        var x = 3; 
+
+                        console.log("Valoarea lui x este", x); // Valoarea lui x este 3
+    
+                        </pre>
+
+                    <h2>Comentarii</h2>
+                    <pre class="prettyprint lang-js linenums">
+                        // Acesta este un comentariu pe un singur rand
+                        /*
+                            Acesta este un comentariu 
+                            care ocupa mai multe randuri
+                        */  
+                    </pre>
+                    <h2>Structuri de date</h2>
+                    <pre class="prettyprint lang-js linenums">
+
+                        /*
+                        Spre deosebire de C/C++/Java/C# sau alte limbaje de programare,
+                        in Javascript definim toate variabilele folosind var (indiferent de tipul lor)
+                        */  
+                        var variabilaMeaDeTipInt = 2;
+                        var variabilaMeaDeTipString = "Aceasta este o propozitie";
+                        var variabilaMeaDeTipBool = true;
+
+                        // Daca vrem sa declaram o variabila fara sa-i atribuim de la inceput o valoare, atunci folosim null;
+
+                        var myVar = null;
+
+                        // Daca nu initializam variabila nici macar cu null, valoarea este undefined.
+
+                        var variabilaMeaUndefined;
+                        console.log(variabilaMeaUndefined) // undefined
+                        
+                        // Dupa cum ati observat, se foloseste o conventie de notatie numita camelCase
+                        // camelCase = prima litera din cuvant este mica, 
+                        // iar apoi toate cuvintele incep cu litera mare
+
+                        // Array
+                        // Exista 2 moduri de a crea un array nou:
+
+                        var myArray = new Array(); // varianta mai putin folosita
+                        var myArray2 = [];   // varianta folosita mai des, pentru rapiditate
+                        var arrCuDate = [1, 2, 3, 4, 5];
+                        var arrCuTipuriDiferite = [1,"Ana",false,5];
+
+                    </pre>
+                    <p>Observatii</p>
+                    <ol>
+                        <li class="observatie">Utilizarea ; este optionala, dar recomandata pentru calitatea codului
+                        </li>
+                        <li class="observatie">Este bine sa nu lasam variabile undefined. Daca nu vrem sa atribuim o
+                            valoare la initializare, atunci folosim null.
+                            Motivatie: Cand cineva vede o variabila undefined, nu stie daca am uitat sa o initializam
+                            sau chiar am vrut sa nu aiba o valoare momentan
+                        </li>
+                    </ol>
+
+                    <h3>Metode pentru array: </h3>
+                    <pre class="prettyprint lang-js linenums">
+                            // Consideram urmatorul array:
+                            var myArr = [1,2,3,4,5];
+
+                            // myArr.length : dimensiunea unui array
+                            console.log(myArr.length) // 6
+
+                            // Parcurgerea unui array
+                            for( i = 0; i < myArr.length; i++){
+                                console.log("elementul :", myArr[i]);
+                            }
+
+                            // Adaugarea unui element in array:
+                            myArr.push(20); // adauga numarul 20 la finalul array-ului.
+
+                            //Eliminarea ultimului element din array
+                            myArr.pop();
+                            
+                            // forEach : o metoda mai eleganta de a parcurge un array
+                            // o sa discutam mai mult in laboratoarele urmatoarea despre forEach 
+
+                            myArr.forEach(function(element){
+                                console.log("elementul este", element)
+                            })
+                    </pre>
+
+                    <h3>JSON (JavaScript Object Notation) </h3>
+                    <p>Este cel mai folosit tip de date; Are o structura cheie - valoare</p>
+                    <pre class="prettyprint lang-js linenums">
+
+                        // Exista 2 moduri de a crea un obiect nou:
+
+                        var myObject = new Object(); // varianta mai putin folosita
+                        var myObject2 = {};   // varianta folosita mai des, pentru rapiditate
+
+                        var student = {
+                            "nume":"Ion",
+                            "prenume": "Popescu",
+                            "age":19,
+                            "pasiuni": ["Citit","Statul in casa - COVID 19","Javascript"]
+                            "note": {
+                              "analiza":9,
+                              "algebra":8,
+                              "tehniciWeb":"restanta"
+                            }
+                           } 
+                           // Obseram structura de cheie valoare; 
+                           // Toate acestea se numesc PROPRIETATI ale obiectului
+                           // Observam ca proprietatea "note" este la randul sau un obiect
+
+                           // Accesarea unei proprietati:
+
+                           console.log("first name is",student.nume) // Ion
+                           console.log("Nota la algebra este",student.note.analiza) // Ion
+
+                           // Adaugarea unei proprietati noi:
+
+                           student.numarRestante = 4;
+                    </pre>
+
+                    <p>Observatii</p>
+                    <ol>
+                        <li class="observatie">O sa folosim obiectele foarte des, in tote laboratoarele de acum inainte
+                        </li>
+                        <li class="observatie">JSON este modul standard prin care putem comunica cu partea de
+                            Backend(server)</li>
+                        <li class="observatie">Noi vom trimite obiecte JSON catre Node.js si vom primi inapoi date, tot
+                            sub forma de obiecte</li>
+                    </ol>
+
+                    <h3>Functii </h3>
+
+                    <pre class="prettyprint lang-js linenums">
+                        // definim functia
+                        function adunare(primulNumar,alDoileaNumar){
+                            // returnam suma celor 2 numere
+                            return primulNumar + alDoileaNumar;
+                        }
+
+                        // apelam functia:
+
+                       var suma = adunare(10,20);
+                       console.log("suma este", suma); // 30
+
+                       // Daca apelam functia cu mai multi parametrii decat am definit initial, 
+                        // parametrul in plus este ignorat
+                       var suma2 = adunare(10,20,30); // 30 este ignorat; sunt adunate doar primele 2 numere
+
+                       // Daca apelam functia cu un parametru in minus in schimb, se intampla ceva interesant;
+                       // alDoileaNumar o sa aiba valoarea default, adica undefined
+                       // javascript incearca sa adune numarul 10 cu string-ul undefined
+                       // ca sa adune cele 2 valori, numarul 10 este convertit la string-ul "10";
+                       // "10" + "undefined" este concatenare de stringuri
+                       // deci o sa avem "10undefined" ca string
+
+                       var sumaUndefined = adunare(10,undefined);
+                       console.log("sumaUndefined este ", sumaUndefined) // sumaUndefined este 10undefined
+
+                       // ca sa evitam aceasta problema, avem 2 variante
+                       // 1) Verificam daca s-a transmis o valoare in cadrul functiei:
+
+                       function adunare(primulNumar,alDoileaNumar){
+                        // returnam suma celor 2 numere
+                        if(typeof primulNumar === "undefined")
+                            primulNumar = 60 // o valoare default, pe care o vrem noi
+
+                        if(typeof alDoileaNumar === "undefined")
+                            primulNumar = 28 // o valoare default, pe care o vrem noi
+
+                        return primulNumar + alDoileaNumar;
+                    }
+
+                    // 2) Incepand din versiunea ES6 de javascript, 
+                    // exista un mod mai simplu pentru a da o valoare default
+
+                    function adunare(primulNumar = 60 ,alDoileaNumar = 28){
+                        // returnam suma celor 2 numere
+                        return primulNumar + alDoileaNumar;
+                    }
+
+                    // valoarea default este folosita doar daca noi nu apelam functia cu parametrul respectiv
+
+                adunare(15) // functia este apelata cu primulNumar = 15 si alDoileaNumar = 28(default)
+                adunare() // functia este apelata cu primulNumar = 60(default) si alDoileaNumar = 28(default)
+                adunare(45,50) // sunt folositi parametrii dati de noi, nu cei default
+
+
+
+                    </pre>
+
+                    <h3>Instructiunea IF; == vs ===</h3>
+                    <pre class="prettyprint lang-js linenums">
+                        // == verifica valoarea, fara sa tina cont de tipul de date
+                        5 == 5  // true 
+                        5 == "5" // true
+
+                        // apar unele situatii neobisnuite
+
+                        0 == false // true
+                        0 == [] //true
+                        0 == {} // false 
+
+                        // === verifica valoarea, inclusiv tipul de date
+                        5 === 5  // true 
+                        5 === "5" // false pentru ca sunt tipuri de date diferite
+
+                        // Instructiunea IF 
+
+                        if( a >= b){
+                            console.log("a este mai mare sau egal cu b");
+                        }
+                        else{
+                            console.log("b este mai mare decat a");
+                        }
+
+                    </pre>
+                    <p>Un tabel complet cu diferenta dintre == si === gasiti aici <a
+                            href="https://dorey.github.io/JavaScript-Equality-Table/" target="_blank">AICI</a></p>
+
+                    <h3>Afisarea cheilor(proprietatilor) unui obiect</h3>
+                    <pre class="prettyprint lang-js linenums">
+                        const object1 = {
+                            a: 'somestring',
+                            b: 42,
+                            c: false
+                          };
+                          
+                          console.log(Object.keys(object1));
+                          // expected output: Array ["a", "b", "c"]
+                    </pre>
+                    <h3>Tema:</h3>
+
+                    <p>Descarcati obiectul JSON de <a href="https://pomber.github.io/covid19/timeseries.json"
+                            target="_blank">AICI</a></p>
+                    <p>Obiectul contine informatii despre evolutia coronavirus la nivel mondial</p>
+                    <p>Explicatie despre citirea obiectului:(am folosit ca exemplu o parte mica din obiect; voi veti
+                        lucra
+                        cu tot JSON-ul descarcat de mai sus)</p>
+                    <pre class="prettyprint lang-js linenums">
+{
+    // Obiectul are mai multe proprietati, fiecare fiind un nume de tara
+    // Pentru fiecare tara avem un array cu mai multe obiecte, ce reprezinta situatie pe zile
+    // Pentru fiecare zi avem (data,cazuri confirmate,pacienti decedati,pacienti vindecati)
+    "Thailand": [
+    {
+      "date": "2020-1-22", // ziua
+      "confirmed": 2,   // cazuri confirmate in data respectiva
+      "deaths": 0,      // pacienti decedati
+      "recovered": 0    // pacienti vindecati
+    },
+    {
+      "date": "2020-1-23",
+      "confirmed": 3,
+      "deaths": 0,
+      "recovered": 0
+    }],
+  "Japan": [
+    {
+      "date": "2020-1-22",
+      "confirmed": 2,
+      "deaths": 0,
+      "recovered": 0
+    },
+    {
+      "date": "2020-1-23",
+      "confirmed": 1,
+      "deaths": 0,
+      "recovered": 0
+    }]
+}
+                    </pre>
+                    <h3>Google Chrome Developer Tools </h3>
+                    <p>Inainte sa va apucati de tema, o sa va ajute foarte mult sa invatati cum se face debugging.</p>
+                    <p>Este util atat pentru HTML si CSS, cat si pentru Javascript</p>
+                    <p>Pe link-ul de mai jos gasiti un video foarte bine explicat.(chiar merita 50 de minute, tinand
+                        cont ca il veti folosi pana la finalul semestrului</p>
+                    <a href="https://www.youtube.com/watch?v=x4q86IjJFag" target="_blank">Tutorial Chrome devtools</a>
+                    <p>Acopera lucruri despre care inca nu am discutat (network,performanta),dar nu trebuie sa
+                        intelegeti codul, ci doar "ce gasiti unde"</p>
+                    <h4>Cerinte:</h4>
+                    <ol>
+                        <li>Scrieti o functie care afiseaza toate tarile din obiect (practic cheile obiectului)</li>
+                        <li>Scrieti o functie care primeste ca parametru un nume de tara si intoarce un nou obiect care
+                            contine doar informatiile despre tara respectiva</li>
+                        <li>Scrieti o functie care primeste ca parametru o zi si intoarce un obiect care contine datele
+                            pentru fiecare tara, DOAR din ziua respectiva.
+                            Daca nu se transmite ca parametru o zi, atunci se va folosi ca valoare curenta ziua de azi;
+                            Cautati cum determinati ziua curenta in Javascript
+                        </li>
+                        <li>Scrieti o functie care returneaza ziua cu cele mai multe cazuri nou confirmate pentru
+                            fiecare tara</li>
+                        <li>Scrieti o functie care primeste ca parametru o tara si returneaza totalul pacientilor
+                            recuperati din tara respectiva.
+                            Daca nu se transmite o tara ca parametru, atunci se va folosi ca valoare default Romania
+                        </li>
+                        <li>Scrieti o functie care sorteaza tarile dupa de numarul total de cazuri.
+                            Functia primeste un parametru parametru care poate avea valoarea "crescator" sau
+                            "descrescator" si ordoneaza tarile in raport de acesta.
+                        </li>
+                        <li>Adaugati in obiect o tara inventata de voi si cu o statistica pentru o zi pe care o vreti
+                            voi (sa respecte formatul)</li>
+                        <li>Scrieti o functie care primeste ca parametru 2 nume de tari si afiseaza o informatie despre
+                            tara care are mai multe cazuri.
+                            Exemplu: Tara X are mai multe cazuri decat tara Y.
+                        </li>
+                        <li>Se considera ca o tara este "In zona verde" daca numarul pacientilor recuperatie este egal
+                            cu numarul cazurilor totale.(toti pacientii s-au vindecat).
+                            Scrieti o functie care afiseaza tarile din "Zona verde"
+                        </li>
+                        <li>Se considera ca o tara va inchide universitatile daca exista cel putin 100 de cazuri
+                            confirmate intr-o singura zi.
+                            Scrieti o functie care afiseaza toate tarile care vor inchide universitatile azi.
+                        </li>
+                        <li>Scrieti o functie care afiseaza in consola numele tarilor care incep cu litera "R".</li>
+                    </ol>
+                    <p class="observatie">Mai jos aveti un hint. Va recomand sa-l folositi doar daca nu va descurcati
+                        singuri.
+                        De asemenea, va rog sa ma intrebati daca va blocati undeva
+                    </p>
+                    <p class="observatie">Deadline: luni, 30.03.2020, ora 23:59</p>
+                    <button onclick="showHide()" class="btn btn-primary">show or hide hint</button>
+                    <div id="hint" class="hide">
+                        <h5>Hint pentru tema:</h5>
+                        <p>Ca sa parcurgeti tarile din obiect, trebuie sa combinati Object.keys cu forEach</p>
+                        <p>Consideram ca in coronaJSON am salvat obiectul cu informatiile despre COVID (cel complet, nu
+                            cel din exemplul de mai sus)</p>
+                        <pre class="prettyprint lang-js linenums">
+                        // Prima linie se citeste: Pentru fiecare cheie a obiectului (adica fiecare tara)
+                    Object.keys(coronaJSON).forEach(function(country){
+                        // afiseaza-mi toate informatiile despre tara respectiva
+                        // similar cum am facut cu student.algebra mai sus;
+                        console.log("country info",coronaJSON.country)
+                      });
+                    </pre>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--  Footer -->
+
+
+        <section class="footer fixed-bottom">
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="container">
+                                <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru Tapirdea.
+                                    All
+                                    Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/superfish.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+        <script>
+            function showHide(event) {
+                var hint = document.querySelector("#hint");
+                console.log("hint", hint)
+                hint.classList.toggle("hide");
+            }
+        </script>
+</body>
+
+</html>

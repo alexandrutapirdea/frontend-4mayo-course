@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body{
+            height: 150vh;
+        }
+        .container{
+            background-color: limegreen;
+            margin:10px;
+        }
+
+        img {
+            width: 400px;
+        }
+        .relative{
+            position: relative;
+            left: 50vw;
+            right: 100px;
+            transform: translate(-50%, 0);
+        }
+        .absolute{
+            position: absolute;
+            left:500px;
+            top:90px;
+        }
+        .fixed{
+            position: fixed;
+            top:50px;
+            left:50px;
+        }
+        .sticky{
+            position: sticky;
+            position: -webkit-sticky;
+            top:50px;
+            left:70vw;
+        }
+
+        #mesaj{
+            color:blue;
+            font-size: 80px;
+            display: inline;
+            /*float: right;*/
+        }
+
+        button{
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .hide{
+            display: none;
+        }
+
+        @keyframes around {
+            0%  { left: 0; top: 0;}
+            25% { left: 240px; top: 0;}
+            50% { left: 240px; top: 140px;}
+            75% { left: 0; top: 140px;}
+            100%{ left: 0; top: 0;}
+        }
+        p#around
+        {
+            position: relative;
+            width: 100px;
+            background-color: red;
+            color:white;
+            animation: around 4s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotateZ(0);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+        img#spinner:hover{
+            /*position: relative;*/
+            animation: spin 1s linear infinite;
+        }
+
+
+
+
+    </style>
+
+    <script>
+        toggleShow = function (event) {
+            event.preventDefault();
+            console.log("ev",event.target.name);
+            var element = document.querySelector("." + event.target.name).parentNode;
+            console.log(element);
+
+            if(!element.classList.contains("hide")){
+                element.classList.add("hide");
+            }
+            else{
+                element.classList.remove("hide");
+            }
+
+        }
+    </script>
+
+</head>
+<body >
+<button onclick="toggleShow(event)" name="static">Static</button>
+<button onclick="toggleShow(event)" name="relative">Relative</button>
+<button onclick="toggleShow(event)" name="absolute">Absolute</button>
+<button onclick="toggleShow(event)" name="fixed">Fixed</button>
+<!--<button onclick="toggleShow(event)" name="sticky">Sticky</button>-->
+<div class="container hide">
+    <h1>Pozitie Statica ; Default</h1>
+<img src="background.jpg" alt="imagine" class="static" />
+</div>
+
+<div class="container hide">
+    <h1>Pozitie Relative ; Avem acces la 4 propeitati CSS ( top, left, right, bottom) si putem pozitiona elementul relativ la unde trebuia sa fie in mod normal</h1>
+    <img src="background.jpg" alt="imagine" class="relative"/>
+</div>
+
+<div class="container hide">
+    <h1>Pozitie: Absolute; Absolute = relativ fata de primul PARINTE cu positon relatie ( Sau fata de Body, daca nu exista niciun parinte relativ)</h1>
+    <h1>Vezi poza de mai sus. Aici div-ul cu verde NU e relative</h1>
+    <img src="background.jpg" alt="imagine" class="absolute"/>
+</div>
+
+<div class="container hide" style="position: relative">
+    <h1>Pozitie : Absolute</h1>
+    <h1>Aici div-ul verde ARE postion Relative</h1>
+    <img src="background.jpg" alt="imagine" class="absolute" />
+</div>
+
+<div class="container hide">
+    <h1>Pozitie Relative ; Avem acces la 4 propeitati CSS ( top, left, right, bottom) si putem pozitiona elementul relativ la unde trebuia sa fie in mod normal</h1>
+    <img src="background.jpg" alt="imagine" class="fixed"/>
+</div>
+
+<p id="around">Animatie: around</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Yellow_Fidget_Spinner.png" alt="spiiner" id="spinner"/>
+
+<!--<div class="container">-->
+    <!--<h1>Pozitie Relative ; Avem acces la 4 propeitati CSS ( top, left, right, bottom) si putem pozitiona elementul relativ la unde trebuia sa fie in mod normal</h1>-->
+    <!--<img src="background.jpg" alt="imagine" class="sticky"/>-->
+<!--</div>-->
+
+<!--<span id="mesaj">Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--Asperiores beatae debitis delectus in inventore ipsam perspiciatis saepe?-->
+<!--A aliquam architecto commodi consequuntur debitis delectus deserunt explicabo nemo nesciunt numquam-->
+<!--quas quisquam sed, velit. Accusamus dolorem doloremque eius eligendi excepturi fugit, ipsum itaque iusto-->
+<!--magnam nisi omnis porro quasi saepe veniam!-->
+<!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+<!--Asperiores beatae debitis delectus in inventore ipsam perspiciatis saepe?-->
+<!--A aliquam architecto commodi consequuntur debitis delectus deserunt explicabo nemo nesciunt numquam-->
+<!--quas quisquam sed, velit. Accusamus dolorem doloremque eius eligendi excepturi fugit, ipsum itaque iusto-->
+<!--magnam nisi omnis porro quasi saepe veniam!</span>-->
+
+
+</body>
+
+</html>

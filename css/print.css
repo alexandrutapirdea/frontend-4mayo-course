@@ -1,0 +1,21 @@
+@media print {
+    div.punctaj {
+        position: relative;
+        top:0;
+    }
+    a#back-to-top, #raport-notare{
+        display: none !important;
+    }
+
+    #feedback{
+        background-color: rgb(255, 255, 125) !important;
+        padding: 1%;
+    }
+    body{
+        background-color:white
+    }
+
+    *{
+        color:black;
+    }
+}

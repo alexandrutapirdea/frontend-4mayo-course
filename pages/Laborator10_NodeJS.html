@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2020
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        img {
+            width: 75%;
+            position: relative;
+            left: 5vw;
+            margin: 10px;
+        }
+
+        hr {
+            display: block;
+            height: 0px;
+            border: 2px solid blueviolet;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+
+        @media print {
+            div.punctaj {
+                position: relative !important;
+                top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="./Laborator2.html">Laborator 3</a></li>
+                                <li><a href="Laborator4.html">Laborator 4</a></li>
+                                <li><a href="Laborator5.html">Laborator 5</a></li>
+                                <li><a href="./Laborator6.html">Laborator 6</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="./Laborator9.html">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                        <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+
+            <div class="message">
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h1>NodeJS</h1>
+                <p>In acest laborator vom discuta despre:</p>
+                <ol>
+                    <li>CRUD - Create, Read, Update, Delete</li>
+                    <li>Implementarea pentru Edit (create, read, update au fost deja acoperite in ultime;e video-uri)
+                    </li>
+                    <li>Scrierea si citirea intr-un fisier JSON - TODO</li>
+                </ol>
+                <h2>Codul sursa:</h2>
+                <a href="https://drive.google.com/open?id=1w5Ygfs_8qTAKNVhNRibYQ9kTOzd7J0jk" target="_blank">
+                    Codul actualizat este disponibil aici</a>
+
+
+                <h1>Frontend</h1>
+                <p>Este foarte important sa intelegem diferenta dintre frontend si backend.
+                    Ceea ce am facut in prima parte a laboratorului (HTML,CSS, chiar si Javascript) se incadreaza la
+                    frontend.
+                    Practic, interfata cu care interactioneaza direct utilizatorul este partea de frontend.
+                </p>
+                <p>Initial, pentru frontend se folosea doar HTML. Ulterior au aparut CSS si Javascript.
+                    In ultimii ani au aparut numeroase framework-uri si librarii.
+                    (ex: React, Angular.js, Angular2+,Vue.js,Oracle JET,Backbone.JS etc).
+                    Asta inseamna ca si pentru partea de frontend lucrurile se complica destul de mult.
+                </p>
+                <p>In primul laborator va spuneam cat de multe librarii, concepte sau tool-uri sunt folosite pentru
+                    programarea web.
+                    Semestrul acesta am reusit sa trecem printr-o parte din ele.(clar mai putin de jumate, dar cam cate
+                    puteam sa "inghesuim" in 3 luni)
+                </p>
+                <p>Aici gasiti lista daca vreti sa vedeti ce am reusit sa bifam si ce mai trebuie sa invatati voi pana
+                    cand o sa va puteti considera experti intr-un domeniu.
+                </p>
+                <a href="https://github.com/kamranahmedse/developer-roadmap"
+                    alt="https://github.com/kamranahmedse/developer-roadmap">Developer roadmap - link</a>
+                <br />
+
+                <img src="https://i.redd.it/4ditktl38qy11.jpg" alt="frontend vs backend img" />
+                <p>Acum, haideti sa discutam despre aplicatia noastra cu adapstul de animale</p>
+                <p>Prin Javascript putem sa preluam anumite date(ex: ce animal vrem sa sterge).
+                    Intr-o aplicatie reala am transmite id-ul elementului pe care vrem sa-l stergem catre backend,
+                    iar backend-ul l-ar sterge din baza de date.
+                    Ca sa nu intram in baze de date (veti avea 2 materii speciale pentru asta in anii urmatori), vom
+                    sterge si vom scrie intr-un fisier JSON.
+                    Nu este o varianta pe care o vreti pentru o aplicatie reala (bazele de date ne ajuta sa facem
+                    validari, de exemplu
+                    ca nu exista mai multe elemente cu acelasi ID... si ne ajuta sa selectam datele mai rapid. De
+                    exemplu atunci cand
+                    avem zeci de mii de produse si vrem sa le obtinem doar pe cele dintr-un interval de pret)
+                </p>
+                <p>Mai jos aveti evidentiate actiunile pentru aplicatia noastra
+                    (cele de UPDATE si DELETE)
+                </p>
+                <img src="../images/FRONTEND.png" alt="frontend/" />
+
+                <p>Read se face la incarcarea paginii (ca sa luam lista initiala cu animale), iar create prin formularul
+                    din ultimul video</p>
+                <h2>Comunicarea dintre FRONTEND si BACKEND</h2>
+                <p>Comunicarea se face prin apeluri AJAX.
+                    Din frontend(javascript) trimitem date catre backend si asteptam sa primim un raspuns inapoi.
+                    Comunicare este ceva de forma:
+                </p>
+                <img src="https://i0.wp.com/blog.codeanalogies.com/wp-content/uploads/2018/01/ajaxfullgetrequest.png?resize=730%2C377&ssl=1"
+                    alt="https://i0.wp.com/blog.codeanalogies.com/wp-content/uploads/2018/01/ajaxfullgetrequest.png?resize=730%2C377&ssl=1" />
+
+                <ol>
+                    <li>Event: Userul da click pe un buton sau completeaza un formular si apasa TRIMITE</li>
+                    <li>URL: trebuie sa-i spunem backend-ului(server) pe ce URL trimitem datele.In functie de URL are
+                        loc o logica diferita.
+                        Ex: atunci cand mergem pe /afieaza-animale serverul stie sa trimita toata lista de animale, iar
+                        atunci cand mergem pe
+                        /sterge-animal/:id serverul stie sa stearga animalul cu un anumit id
+                    </li>
+                    <li>Data: ce animal sa stearga, cum se numeste animalul dupa EDIT, datele pentru un animal nou creat
+                        etc. Informatiile vin din interfata grafica (frontend) si le putem transmite fie in URL(cum am
+                        facut la "stergere-anima"/:id), fie in BODY( daca avem de transmit mai multe informatii, de
+                        exemplu un obiect JSON de tip animal)</li>
+                    <li>Backend - codul de Node.js care comunica cu fisierul JSON sau cu o baza de date</li>
+                    <li>Dupa ce si-a terminat treaba (care poate dura ceva) serverul trimite inapoi un raspuns.
+                        Timpul in care primim un raspuns tine de viteza conexiunii la internet si de complexitatea
+                        cerintei.
+                        (una este cand avem 10 obiecte in baza de date si alta cand avem 5 milioane).
+                        Aici intervine video-ul despre "Ce este un promise?"
+                    </li>
+                </ol>
+                <p>Aici gasiti un articol complet care face analogia dintre un restaurant si comunicarea
+                    FRONTEND-BACKEND:</p>
+                <a href="https://blog.codeanalogies.com/2018/01/15/ajax-basics-explained-by-working-at-a-fast-food-restaurant/"
+                    alt="https://blog.codeanalogies.com/2018/01/15/ajax-basics-explained-by-working-at-a-fast-food-restaurant/">
+                    Articol complet</a>
+                <h2>BACKEND</h2>
+                <p>Pe aplicatia noastra, lucrurile arata in felul urmator:</p>
+                <img src="../images/BACKEND.png" alt="frontend/" />
+                <p>Observatie: Exista mai multe moduri in care putem trimite date catre backend.
+                    Cele mai folosite 2 variante sunt:
+                </p>
+                <ol>
+                    <li>Trimitem informatia in URL(ca la delete)</li>
+                    <li>Trimitem informatia in BODY ca JSON(ex: CREATE sau UPDATE)</li>
+                </ol>
+                <p>In general atunci cand aveti de transmis mai multe informatii(de exemplu un obiect de tip animal sau
+                    un array) este mai comod sa folositi un JSON(dar nu va opreste nimeni sa trimiteti datele in URL).
+                    Vizual, cele 2 metode arata asa:
+                </p>
+
+                <img src="../images/date.PNG" alt="date" />
+
+                <h2>Cod pentru edit:</h2>
+                <pre class="prettyprint lang-js linenums">
+                    // pentru moment folosim un array definit pe backend.
+                    // In viitor in locul lui vom scrie/citi intr-un fisier JSON
+                    let animale = [
+    {
+        id: uid(32),
+        nume: "Rex",
+        tip: "caine",
+        src: "https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg"
+
+    },
+    {
+        id: uid(32),
+        nume: "Puffy",
+        tip: "caine",
+        src: "https://images.dog.ceo/breeds/havanese/00100trPORTRAIT_00100_BURST20191030212452971_COVER.jpg"
+    },
+    {
+        id: uid(32),
+        nume: "Oliver",
+        tip: "caine",
+        src: "https://images.dog.ceo/breeds/sheepdog-english/n02105641_4975.jpg"
+    }
+]
+
+// Facem put pe URL-ul "/editeaza-animal"
+// Trimitem un body informatiile despre animalul modificat(de exemplu noul nume sau noua imagine)
+                    app.put("/editeaza-animal", (req, res) => {
+                        const animalData = req.body;
+                        console.log("Am primit pe body datele: ", animalData)
+                        // findIndex ne da pozitia din array pentru elementul pe care vrem sa il modificam
+                        let animalCurentIndex = animale.findIndex(animal => animal.id === animalData.id);
+                        // din array-ul de animale modificam doar elementul pe care l-am editat in frontend
+                        animale[animalCurentIndex] = animalData;
+                    
+                        // returnam intreg array-ul de animale, cu tot cu animalul modificat.
+                        res.send(animale);
+                    })
+                    
+                    </pre>
+
+
+                <p>Observam ca am folosit PUT pentru a edita un element.
+                    Este o conventie pe care e bine sa o respectam. Atunci cand alt programator vede ca facem un GET se
+                    asteapta ca noi doar sa primim date si cand facem un DELETE sa stergem ceva.
+                    Teoretic puteti la GET/POST/PUT sa stergeti date fara probleme, dar este contra-intuitiv
+                </p>
+
+                <h2>Pentru EDIT, pe partea de frontend trebuie sa facem 2 pasi:</h2>
+                <ol>
+                    <li>Obtinem datele despre noul animal (utilizatorul completeaza un formular cand apasa pe butonul de
+                        edit, iar noi preluam datele cu Javascript)</li>
+                    <li>Facem apelul AJAX catre server si asteptam un raspuns</li>
+                </ol>
+
+                <pre class="prettyprint lang-js linenums">
+                    // la click pe butonul de salveaza modificarile din modal/formular 
+                    // (vezi structura html din drive)
+                    savleazaModificarile.addEventListener("click", async function () {
+                        // luam valorile din input-uri folosind javascript
+                        let nume = document.querySelector("#editeaza-nume").value;
+                        let select = document.querySelector("#editeaza-tip");
+                        const tip = select.options[select.selectedIndex].value;
+                        let imagineAnimal = document.querySelector("#editeaza-imagine").value;
+                    
+                        // creem un nou obiect de tip animal cu datele modificate de utilizator
+                        const editedAnimal = {
+                            "id": animalContainerID,
+                            nume,
+                            tip,
+                            "src": imagineAnimal
+                        }
+                    
+                        // facem apelul ajax catre editeaza-animal (server) si ii trimitem datele
+                        let URL = "http://localhost:3000/editeaza-animal/";
+                        animaleArray = await editeazaAnimal(URL, editedAnimal);
+                        // dupa ce am primit datele reafisam elementele in pagina
+                        afiseazaAnimale2()
+
+// 2. Apelul AJAX efectiv
+// functia este async pentru ca avem apel AJAX si promise.
+// fara async nu puteam face await
+// data reprezinta obiectul editedAnimal obtinut anterior
+// daca nu se trimite nimic, avem default un obiect gol {} ca sa evitam o eroare
+// la fel pentru url; default ii punem un string vid; Nu se va face request-ul, dar nu crapa aplicatia
+async function editeazaAnimal(url = '', data = {}) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+        method: 'PUT', // *GET, POST, PUT, DELETE, etc.
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+    return response.json();
+}
+})
+                    </pre>
+            </div>
+
+            <!--  Footer -->
+
+
+            <section class=" footer fixed-bottom">
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="container">
+                                    <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru
+                                        Tapirdea.
+                                        All
+                                        Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/superfish.min.js"></script>
+            <script src="../js/wow.min.js"></script>
+            <script src="../js/custom.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+</body>
+
+</html>

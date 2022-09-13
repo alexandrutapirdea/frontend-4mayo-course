@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2022
+
+    </title>
+
+    <link rel="shortcut icon" href="../../pages/css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../../pages/css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../../pages/css/animate.min.css" rel="stylesheet" />
+
+    <link href="../../pages/css/style.css" rel="stylesheet">
+
+    <link href="../../pages/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../../pages/css/outline.css" rel="stylesheet">
+    <link href="../../pages/css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+
+    <style>
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+        }
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+
+        .mare{
+            font-size: 32px !important;
+            font-weight: bold !important;
+            margin-bottom: 40px !important;
+            margin-top: 40px !important;
+        }
+
+        a{
+            font-weight: bold !important;
+            background-color: #ffffff;
+            text-decoration: underline;
+            
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../../pages/index.html"><img src="../../pages/css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../../index.html">Acasa</a>
+                        <li><a href="../../pages/Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="../../pages/Laborator1.html">Laborator 1</a></li>
+                                <li><a href="../../pages/Laborator2.html">Laborator 2</a></li>
+                                <li><a href="../../pages/Laborator2.html">Laborator 3</a></li>
+                                <li><a href="../../pages/Laborator4.html">Laborator 4</a></li>
+                                <li><a href="../../pages/Laborator5.html">Laborator 5</a></li>
+                                <li><a href="../../pages/Laborator6.html">Laborator 6</a></li>
+                                <li><a href="../../pages/Laborator8.html">Laborator 8</a></li>
+                                <li><a href="../../pages/Laborator8.html">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="../../pages/ProiectHML.html">Proiect HTML + CSS</a></li>
+                        <li><a href="../../pages/ProiectJS.html">Proiect Javascript</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 center-block">
+            <div style="text-align: center">
+                <h2>12 Aprilie 2022 - Request-uri HTTP</h2>
+                <h3>Comunicarea dintre frontend si backend</h3>
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h1 class="mare">Ce este un Full Stack Developer ?</h1>
+                <img src="../assets/fullstack.webp" alt="full stack meme" style="width: 80vw;"/>
+                <h1 class="mare">Ce am studiat pana acum ?</h1>
+                <a href="https://roadmap.sh/" target="_blank">DEVELOPER ROADMAP</a>
+                <br/>
+                <img src="../assets/frontend.png" alt="frontend meme"/>
+                <h1 class="mare">Ce poti face cu "Javascript" ?</h1>
+                <h2>Backend</h2>
+                <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+                <h2>Aplicatii Desktop - ex: Microsoft Teams</h2>
+                <a href="https://www.electronjs.org/" target="_blank">Electron</a>
+                <br/>
+                <h2>Machine Learning</h2>
+                <a href="https://www.tensorflow.org/js" target="_blank">TensorFlow JS</a>
+                <br/>
+                <h2>Aplicatii Mobile Cross-Platform (merg si pe iOS si pe Android)</h2>
+                <a href="https://cordova.apache.org/" target="_blank">Cordova</a>
+                <a href="https://reactnative.dev/" target="_blank">React Native</a>
+                <br/>
+                <h2>Embedded - de exemplu o placuta Arduino sau Raspberry PI</h2>
+                <a href="https://nodered.org//" target="_blank">Node RED</a>
+                <br/>
+                <img src="../assets/arduino.webp" alt="arduino"/>
+                <br/>
+                <h1 class="mare">Cum functioneaza o aplicatie ?</h1>
+                <img src="../assets/AplicatieWeb.PNG" alt="schema generala frontend backend" style="margin:50px"/>
+                <p>Pana acum ati studiat partea de Frontend/Client/UI(User Interface)</p>
+                <p>Astazi vom discuta despre cun comunica Frontend-ul cu Backend-ul</p>
+                
+                <div>
+                    <h2 class="mare">Ce este un request HTTP ?</h2>
+                    <img src="../assets/API.webp" alt="schema generala frontend backend" style="margin:50px"/>
+                    <img src="../assets/HTTPStructure.png" alt="http structure" style="margin:50px"/>
+                    <h1 class="mare" style="display: inline;">Demo Time - Postman(toata lumea) </h1>
+                    <span style='font-size:80px;'>&#129409;</span>
+                    <br/>
+                    <a href="https://identity.getpostman.com/login" target="_blank">Postman Login</a>
+                    <br/>
+                    <br/>
+                    <h1 class="mare" style="display: inline;">Statusuri HTTP </h1>
+                    <br/>
+                    <br/>
+                    <a href="https://httpstatusdogs.com/" target="_blank">Status-uri HTTP cu Catei</a>
+                    <br/>
+                    <br/>
+                    <h1 class="mare" style="display: inline;">Ne jucam cu bomba </h1>
+                    <br/>
+                    <br/>
+                    <a href="https://laborator-fmi-web.educationhost.cloud/2022/" target="_blank">Site Bomba</a>
+                    <br/>
+                    <br/>
+                    <h1 class="mare" style="display: inline;">Hai sa scriem cod </h1>
+                    <br/>
+                    <br/>
+                    <pre class="prettyprint lang-js linenums">
+                        const BASE_URL = "https://exemplu-api-fmi.herokuapp.com";
+
+                        const getBombData = () => {
+                          fetch(`${BASE_URL}/bomb`) // Call the fetch function passing the url of the API as a parameter
+                            .then(function (promiseResponse) {
+                              // fetch API ne intoarce o promisiune
+                              // response.json() converte promisiunea la un obiect de tip JSON care contine datele noastre
+                              // trebuie sa folosim "then" ca sa asteptam pana are loc conversia (response.json() este async)
+                              promiseResponse.json().then(function (jsonResponse) {
+                                console.log("response din Fetch API", jsonResponse);
+                                return jsonResponse;
+                              });
+                            })
+                            .catch(function (error) {
+                              // Daca am avut o eroare
+                              console.log("Eroarea este", error);
+                            });
+                        };
+                        
+                        // getBombData();
+                        
+                        const getBombDataES6 = async () => {
+                          try {
+                            const promiseResponse = await fetch(`${BASE_URL}/bomb`);
+                            const jsonResponse = await promiseResponse.json();
+                            console.log("Datele despre bomba", jsonResponse);
+                        
+                            return jsonResponse;
+                          } catch (error) {
+                            console.log("eroarea este", error);
+                          }
+                        };
+                        
+                        // getBombDataES6();
+                        
+                        const checkWireExists = async () => {
+                          try {
+                            const promiseResponse = await fetch(
+                              `${BASE_URL}/bomb/check?year=2022&model=ROBOMB&wire=white`
+                            );
+                            const jsonResponse = await promiseResponse.json();
+                            console.log("Am primit datele despre firul cerut", jsonResponse);
+                        
+                            return jsonResponse;
+                          } catch (error) {
+                            console.log("eroarea este", error);
+                          }
+                        };
+                        
+                        // checkWireExists();
+                        
+                        const createWire = async () => {
+                          try {
+                            const requestData = {
+                              wire: "pink2",
+                              how: "tape",
+                            };
+                        
+                            const requestOptions = {
+                              method: "POST", // *GET, POST, PUT, DELETE, etc.
+                              headers: {
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify(requestData), // body data type must match "Content-Type" header
+                            };
+                        
+                            const promiseResponse = await fetch(
+                              `${BASE_URL}/bomb/create`,
+                              requestOptions
+                            );
+                            const jsonResponse = await promiseResponse.json();
+                        
+                            if (promiseResponse.status >= 400) {
+                              throw new Error(`Ceva nu a mers bine: ${JSON.stringify(jsonResponse)}`);
+                            }
+                        
+                            console.log("Firul a fost adaugat", jsonResponse);
+                            return jsonResponse;
+                          } catch (error) {
+                            console.log("eroarea este", error);
+                          }
+                        };
+                        
+                        // createWire();
+                        
+                        const deleteWire = async () => {
+                          try {
+                            const requestData = {
+                              wire: "pink",
+                            };
+                        
+                            const requestOptions = {
+                              method: "DELETE", // *GET, POST, PUT, DELETE, etc.
+                              headers: {
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify(requestData), // body data type must match "Content-Type" header
+                            };
+                        
+                            const promiseResponse = await fetch(`${BASE_URL}/bomb`, requestOptions);
+                            const jsonResponse = await promiseResponse.json();
+                        
+                            if (promiseResponse.status >= 400) {
+                              throw new Error(`Ceva nu a mers bine: ${JSON.stringify(jsonResponse)}`);
+                            }
+                        
+                            console.log("Firul a fost STERS", jsonResponse);
+                            return jsonResponse;
+                          } catch (error) {
+                            console.log("eroarea este", error);
+                          }
+                        };
+                        
+                        // deleteWire();
+                        
+                        const updateSymbol = async () => {
+                          try {
+                            const requestData = {
+                              symbol: "dog",
+                            };
+                        
+                            const requestOptions = {
+                              method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                              headers: {
+                                "Content-Type": "application/json",
+                              },
+                              body: JSON.stringify(requestData), // body data type must match "Content-Type" header
+                            };
+                        
+                            const promiseResponse = await fetch(`${BASE_URL}/bomb`, requestOptions);
+                            const jsonResponse = await promiseResponse.json();
+                        
+                            if (promiseResponse.status >= 400) {
+                              throw new Error(`Ceva nu a mers bine: ${JSON.stringify(jsonResponse)}`);
+                            }
+                        
+                            console.log("Simbolul a fost modificat", jsonResponse);
+                            return jsonResponse;
+                          } catch (error) {
+                            console.log("eroarea este", error);
+                          }
+                        };
+                        
+                        // updateSymbol();
+
+                    </pre>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/superfish.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+        <script>
+            function showHide(event) {
+                var hint = document.querySelector("#hint");
+                console.log("hint", hint)
+                hint.classList.toggle("hide");
+            }
+        </script>
+</body>
+
+</html>

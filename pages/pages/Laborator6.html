@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2019
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="./Laborator2.html">Laborator 3</a></li>
+                                <li><a href="./Laborator4.html">Laborator 4</a></li>
+                                <li><a href="./Laborator5.html">Laborator 5</a></li>
+                                <li><a href="./Laborator6.html">Laborator 6</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="#">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                        <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+
+            <div style="text-align: center">
+                <h2>Laborator 6</h2>
+
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h3>Cuprins:</h3>
+                <ol>
+                    <li>Despre DOM(Document Object Model)</li>
+                    <li>Selectarea elementelor din pagina (elementele din DOM)</li>
+                    <li>Evenimente de browser (click,taste apasate etc)</li>
+                    <li>Manipularea elementelor din DOM</li>
+                    <li>Javascript Avansat: ES6 (l-am mutat in laboratorul 7 ca sa nu fie prea multa informatie acum)</li>
+                    <li>Tema :) </li>
+                </ol>
+                <div>
+                    <div class="observatie" style="border:5px solid black; padding:5px;">
+                        <h2>Anunt: PROIECTUL de HTML&CSS</h2>
+                        <p>Nu uitati de proiectul de HTML si CSS. <span style="font-weight: bold;"> Deadline-ul este 10
+                                aprilie</span> </p>
+                        <p>Daca vreti sa primiti feedback pentru ce ati facut pana acum, va rog sa-mi trimiteti
+                            proiectele <span style="font-weight: bold;">pana cel tarziu vineri, 3 aprilie</span></p>
+                        <p>Cei care imi trimit proiectele pana pe 3 aprilie(inclusiv) o sa primeasca un punctaj
+                            provizoriu si o lista cu subiectele unde ati fost depunctati.(ca sa completati cu ce mai
+                            trebuie pana la deadline)
+                        </p>
+                        <p>Daca imi trimiteti proiectele dupa data de 3 aprilie, o sa va trimit direct punctajul
+                            obtinut, dar nu mai puteti modifica acolo unde pierdeti puncte </p>
+                        <p>Cerintele complete si un calculator pentru punctaj se gaseste aici: <a
+                                href="./ProiectHML.html">Proiect HTML + CSS</a></p>
+                    </div>
+                    <h2>Despre DOM?</h2>
+                    <p>O sa folosim destul de des notiunea de "document" cand discutam de javascript.
+                        Va puteti gandi la "document" ca la un obiect JSON foarte mare, care contine toate elementele
+                        din pagina.
+                        (precum si alte date, ca de exemplu evenimentele de browser, adresa URL (locatia) pe care suntem
+                        etc)
+                    </p>
+                    <p> Pentru niste explicatii mai detaliate, puteti sa cititi in cursul <a
+                            href="https://sites.google.com/site/fmitehniciweb/notare" target="_blank">Curs 6</a>
+                    </p>
+                    <p>Sa consideram urmatorul exemplu</p>
+                    <img src="../css/images/DOM.jpg"
+                    style="width: 150%;margin-bottom: 20px;"/>
+                    <p>In partea stanga aveti codul HTML al unei pagini simple, iar in partea dreapta reprezentarea paginii in DOM</p>
+                    <p>Orice browser se foloseste de acest obiect DOM ca sa stie cum sa afiseze codul HTML.</p>
+                    <p>Dupa cum am invatat in laboratorul trecut, putem accesa proprietatile unui obiect folosind "." Ex: student.nume</p>
+                    <p>Ca sa interactionam cu tag-urile noastre din body, o sa folosim document.body</p>
+                    <div class="exercitiu">
+                        <h2>Exercitiul 1</h2>
+                        <img src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+                        style="width: 50px;display: inline;"/>
+                        <p style="display: inline;">Creati o pagina HTML cu codul din imaginea de mai sus. Dupa ce ati creat pagina, legati un fisier javascript numit "my-javascript.js". 
+                        In fisierul javascript, scrieti console.log(document.body) si deschide consola.
+                    </p>
+                    <p>Cum arata obiectul document.body afisat in consola?</p>
+                    <p>Observatie: Prima persoana care scrie raspunsul corect pe grupul de facebook are o steluta in plus la activitate.
+                        Va rog sa nu-mi trimiteti raspunsul in privat. Faceti pe grupul de facebook al laboratorului o postare cu cerinta si raspuns.
+                    </p>
+                    </div>
+
+                    <h2>Selectarea elementelor din pagina</h2>
+                    <p>Scopul nostru este sa putem "manipula elementele din DOM". 
+                        Asta inseamna ca vrem sa selectam de exemplu un anumit paragraf si sa-i modificam culoarea;
+                        Sau vrem sa selectam o anumita imagine si sa-i modificam dimensiunea;
+                        Sau vrem sa selectam toate elementele cu o anumita clasa si sa le stergem din pagina.
+                        Sau vrem sa selectam toate butoanele si sa adaugam o functie care face ceva la "click".
+                    </p>
+
+                    <h3>1. Selectarea elementelor dupa TAG : document.getElementsByTagName(tag)</h3>
+                    <pre class="prettyprint lang-js linenums">
+                    
+                        // Selectarea tuturor paragrafelor
+                        // Folosim document.getElementsByTagName("tag")
+                        // primim inapoi un obiect de tip HTML.collection cu paragrafele din pagina
+                        // obiectul este destul de similar cu un array, 
+                        var paragrafe = document.getElementsByTagName("p");
+
+                        // Afisarea colectiei in consola.
+                        console.log("paragrafele din pagina sunt: ",paragrafe);
+
+                        // Accesarea primului paragraf:
+                        paragrafe[0]
+
+                        // Acesarea ultimuli paragraf:
+                        paragrafe[paragrafe.length - 1]
+    
+                        </pre>
+        <p class="observatie">Exista asemanari si deosebire intre HTML.colletion si array.
+            Pentru noi, important este sa retinen:
+        </p>
+        <ol>
+            <li style="color:red">HTML.Collection este "live"(adica atunci cand stergem sau adaugam un element in pagina, colectia se actualizeaza automat.
+                Exemplu practic: Am selectat toate paragrafele si mai adaugam un paragraf nou in pagina. Colectia o sa contina acest paragraf nou adaugat.
+            </li>
+            <li style="color:red">Nu avem aceleasi metode pe care le aveam pe un array obisnuit. O sa intelegem mai bine diferenta in laboratoarele urmatoare</li>
+            <li style="color:green">La fel ca la array, putem selecta al 2-lea element din colectie folosind numeVariabila[1]</li>
+        </ol>
+
+        <h3>2. Selectarea elementelor cu o anumita clasa : document.getElementsByClassName("numeClasa")</h3>
+        <pre class="prettyprint lang-js linenums">
+        
+            // Selectarea tuturor elementelor cu clasa "p2"
+            // document.getElementsByClassName("numeClasa")
+            // primim inapoi un obiect de tip HTML.collection cu toate elementele care au clasa "p2"
+            // obiectul este destul de similar cu un array, 
+            var elementeDupaClasa = document.getElementsByClassName("p2");
+
+            // Afisarea colectiei in consola.
+            console.log("Elementele cu clasa p2 sunt: ",elementeDupaClasa);
+
+            // Observatie: Daca NU avem niciun element cu o anumita clasa, atunci primim o colectie goala.
+            // similar cu un array fara niciun element
+
+            // Daca avem un singur element cu o anumita clasa, atunci primim o colectie cu un singur element.
+
+            // Concluzie: Chiar daca avem un singur element, tot trebuie sa-l accesam cu:
+            elementeDupaClasa[0] // primul element
+
+            </pre>
+
+            <h3>3. Selectarea elementului cu un anumit id : document.getElementById("numeID")</h3>
+            <pre class="prettyprint lang-js linenums">
+            
+                // Observatie: Aici avem la singular. document.getElementById
+                // Motivul este ca putem avea un singur element cu aceleasi ID (ID-ul trebuei sa fie unic)
+                // PRIMIM INAPOI UN SINGUR ELEMENT (nu mai primim colectie)
+                var elementCuID = document.getElementById("div1");
+    
+                // Afisarea elementului
+                console.log("Singurul element cu id-ul div1 este:  ",elementCuID);
+    
+                // Observatie: Daca NU avem niciun element cu id-ul specificat, atunci primim NULL
+                </pre>
+
+                </div>
+
+                <h3>4. Selectarea elementelor folosind document.querySelector("ceva")</h3>
+                <h4 style="font-size: 16px;">Aceasta metoda poate sa inlocuiasa toate metodele folosite pana acum</h4>
+                <pre class="prettyprint lang-js linenums">
+                
+                    // document.querySelector primeste ca parametru un selector de CSS(exact cum am selecta un element in css)
+                    document.querySelector("p") // primul paragraf
+                    document.querySelector(".bold-red") // primul element cu clasa "bold-red", obsrvati ca am folosit si punct "."
+                    document.querySelector("#nume-id") // primul element cu id-ul "nume-id"; observati ca am folosit si "#" ca sa indicam ca este un id, la fel ca in css
+                    </pre>
+                <h3>5. Selectarea elementelor folosind document.querySelectorAll("ceva")</h3>
+                <h4 style="font-size: 16px;">Similar cu document.querySelector, doar ca in loc sa selecteze PRIMUL element care respecta proprietatea, selecteaza TOATE elementele care respecta o anumita proprietate</h4>
+                    </div>
+
+                    <div class="exercitiu">
+                        <h4>Exercitiul 2</h4>
+                        <img src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+                        style="width: 50px;display: inline;"/>
+                        <p style="display: inline;color:red">Puteti acumula o singura stelula pe laborator, deci daca ati raspunsul la alt exercitiu din laboratorul 6, nu puteti raspunde si la acesta pe grup.
+                        Ideea este sa poata lua cat mai multa lume stelute</p>
+                        <p>Cerinta: Intrati in consola pentru aceasta pagina (Laboratorul 6 de pe site) si determinati:
+                        </p>
+                        <ul>
+                            <li>Cate paragrafe sunt in pagina ?</li>
+                            <li>Cate elemente cu clasa "observatie" sunt in pagina?</li>
+                            <li>Cate elemente cu id-ul "tema" sunt in pagina ?</li>
+                            <li>Cate imagini sunt in pagina(inclusiv logo din meniul de naivgare) ?</li>
+                        <p>Scrieti pe grupul de facebook raspunsul, impreuna cu codul pe care l-ati folosit.
+                            (nu se va lua in calcul rezolvarea daca nu include si liniile de cod pentru ca ati putea efectiv sa le numarati manual)
+                        </p>
+                        <p>Doar prima persoana care raspunde primeste steluata. Se iau in calcul doar raspunsurile postate pe grupul de facebook, nu si mesaje primate/mail-uri</p>
+                        </ul>
+                        
+                    </div>
+                    <div class="message">
+                    <h2>Evenimente de browser</h2>
+                    <p>Evenimentele sunt actiuni care se intampla in pagina, iar noi putem definii functii care se activeaza cand are loc un anumit eveniment.</p>
+                    <p>Aici puteti vedea principalele evenimente, impreuna cu descrierea lor: <a href="https://data-flair.training/blogs/javascript-event-types/" target="_blank">Evenimente</a></p>
+                    <p>Noi o sa folosim cel mai mult:</p>
+                    <ul>
+                        <li>load - cand s-a terminat de incarcat pagina</li>
+                        <li>click - cand se da click pe un anumit element(buton,imagine,paragraf etc)</li>
+                        <li>keydown - cand se apasa o tasta; OBS: Daca tasta ramane apasa, evenimentul se activeaza de mai multe ori; Ex: apasam pe W si vrem sa personajul din joc sa mearga in sus cat tinem tasta apasata</li>
+                        <li>change: cand se scrie intr-un input</li>
+                        <li>submit - cand se trimite un formular</li>
+                    </ul>
+                    <p>O sa folosim si alte evenimente, dar pe acestea cel mai des</p>
+                    <h3>Cum actioneaza un eveniment?</h3>
+                    <img src="../css/images/eventSchema.PNG" alt="imagine - schema unui event"/>
+                    <h3>Cum adaugam un eveniment in Javascript?</h3>
+                    <h4>Folosim: addEventListener</h4>
+                    <img src="../css/images/addEventListener.PNG" alt="addEventListener"/>
+
+                    <p class="observatie">Observati ca functia de mai sus primeste ca parametru "event".
+                        Browser-ul "stie singur" informatii despre evenimentul care s-a produs
+                        (pe ce buton am dat click, ce tasta a fost apasata etc)
+                        O sa discutam in urmatorul laborator cum ne putem folosi de event in avantajul nostru
+                    </p>
+                    <div class="exercitiu">
+                        <h4>Exercitiul 3</h4>
+                        <img src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+                        style="width: 50px;display: inline;"/>
+                        <p style="display: inline;color:red">Puteti acumula o singura stelula pe laborator, deci daca ati raspuns la alt exercitiu din laboratorul 6, nu puteti raspunde si la acesta pe grup.
+                        Ideea este sa poata lua cat mai multa lume stelute</p>
+                        <p>Cerinta: Desi nu este recomandat, puteti adauga functiile care asculta pe eveniment direct pe elementul html (ca orice alt atribut).
+                            Ex: &lt;button type="text" onclick="myFunction()">Click me&lt;/button>
+                        </p>
+                        <p>Care este diferenta(diferentele) dintre aceasta metoda si addEventListener?</p>
+                        <p>Ce se intampla daca vrem sa adaugam 2 functii diferite, care se intampla tot la click pe acelasi element?
+                            Ex: O functie care afiseaza un mesaj si alta care face refresh la pagina 
+                        (comparati situatia asta pentru metoda de mai sus si addEventListener)    
+                        </p>
+                        </ul>
+                        
+                    </div>
+
+                
+                    <h2>Modificarea proprietatilor unui element</h2>
+                    <pre class="prettyprint lang-js linenums">
+                        // Selectam elementul de modificat folosind id-ul (presupunem ca are unul)
+                            var elementDeModificat = document.querySelector("#elementDeModificat");
+
+                            // ii dam culoarea rosie
+                            elementDeModificat.style.color = "red";
+                            // proprietatea font-weight devine fontWeight in javascript
+                            // la fel pentru toate cele din 2 cuvinte (ex: textAlign, backgroundColor etc)
+                            elementDeModificat.style.fontWeight = "bold";
+
+                            // OBS: Stundetii in general uita de acel "style"
+                        </pre>
+
+                        <h2>Adaugarea unei clase de CSS</h2>
+                        <pre class="prettyprint lang-js linenums">
+                            // Selectam elementul de modificat folosind id-ul (presupunem ca are unul)
+                                var elementDeModificat = document.querySelector("#elementDeModificat");
+
+                                // adaugarea unei clase de CSS
+                                elementDeModificat.classList.add("numeClasa");
+
+                                // eliminarea unei clase de CSS
+                                elementDeModificat.classList.remove("numeClasa");
+                            </pre>
+
+                            <div class="exercitiu">
+                                <h4>Exercitiul 4</h4>
+                                <img src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+                                style="width: 50px;display: inline;"/>
+                                <p style="display: inline;color:red">Puteti acumula o singura stelula pe laborator, deci daca ati raspunsul la alt exercitiu din laboratorul 6, nu puteti raspunde si la acesta pe grup.
+                                Ideea este sa poata lua cat mai multa lume stelute</p>
+                                <p>Cerinta: Exista o metoda pentru classList numita toggle.
+                                    Scrie o explicatie pentru colegii tai si realizeaza un exemplu.
+                                    (tu decizi cum vrei sa prezinti "notiunea"; poti scrie cod pe laptop, sa faci un desen de mana,
+                                    sa faci un video etc)
+                                </p>
+                                <p>Posteaza rezultatul pe grupul de facebook.</p>
+                                <p>Again, doar prima persoana care raspunde o sa primeasca steluta.<p>
+                                   <p>
+                                       OBS: Daca raspunsul este gresit sau daca este luat copy paste de pe internet, nu o sa fie punctat.
+                                    Vreau sa explicati voi ("cu cuvintele voastre") ce ati inteles.
+
+                                </p>
+                                
+                            </div>
+        
+                            <h2>Selectarea valorii dintr-un input (utila pentru tema)</h2>
+                            <pre class="prettyprint lang-js linenums">
+                                // selectam input-ul. In cazul nostru, primul input
+                                    var input = document.querySelector(input);
+    
+                                    console.log("valoarea din input este", input.value)
+                                </pre>
+
+                                <h2>Functia Math.random() - o sa va ajute pentru tema</h2>
+                                <pre class="prettyprint lang-js linenums">
+                                    // Math.random() genereaza un numar random cu virgula, din intervalul
+                                    [0,1): inclusiv 0, dar fara 1
+                                    
+                                    // Daca vrem un numar din intervalul [0,100), atunci:
+                                    var numarDinInterval = Math.random() * 100;
+
+                                    // Daca vrem un numar INTREG intervalul [0,100), atunci:
+                                    var numarIntreg =  Math.floor(Math.random() * 100);
+                                    </pre>
+                    
+                    <div class="tema">
+                    <h2>Tema</h2>
+                    <p>Aveti cerintele aici: <a href="../ex_events.html" target="_blank">Tema laborator 6</a></p>
+                    <p>Deadline: luni, 6 aprilie, ora 23:59</p>
+                    <p>Temele se incarca <a href="https://drive.google.com/drive/folders/1ByHI8GfriTP2Rj0PB3Cmp0DvVW983xQI" target="_blank">Aici</a></p>
+                </div>
+                </div>
+            </div>
+
+            <!--  Footer -->
+
+
+            <section class="footer fixed-bottom">
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="container">
+                                    <p class="text-center" style="color: white">Copyright &copy; 2019 Alexandru
+                                        Tapirdea.
+                                        All
+                                        Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+            <script src="../js/jquery.min.js"></script>
+            <script src="../js/bootstrap.min.js"></script>
+            <script src="../js/superfish.min.js"></script>
+            <script src="../js/wow.min.js"></script>
+            <script src="../js/custom.js"></script>
+            <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+            <script>
+                function showHide(event) {
+                    var hint = document.querySelector("#hint");
+                    console.log("hint", hint)
+                    hint.classList.toggle("hide");
+                }
+            </script>
+</body>
+
+</html>

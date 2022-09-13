@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitiu</title>
+    <style>
+        .big-bold{
+            font-weight: bold;
+            font-size: 20px !important;
+        }
+
+        #cerinte *{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border: 5px solid black; background-color: lemonchiffon; padding:3%" id="container">
+        <h3>Selecteaza destinatia</h3>
+        <select id="destinatii">
+            <option value="Maldive">Maldive</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Mexico City">Mexico City</option>
+          </select>
+        <h1>Bun venit in Maldive</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi iste sapiente expedita voluptatibus nisi
+            earum harum unde suscipit nostrum officia eveniet explicabo quod ex in optio fugiat veritatis voluptatum
+            adipisci repellat numquam delectus, aspernatur similique aut. Quia blanditiis corporis velit vel commodi
+            eius laborum voluptas. Obcaecati ullam vero incidunt, aliquam cupiditate nesciunt, aspernatur voluptate
+            fuga, maxime quasi libero reprehenderit enim at hic ducimus perferendis! Voluptates nobis esse amet ratione
+            commodi et accusantium suscipit, molestiae hic tempora! Minus ipsa sit repudiandae cum velit necessitatibus
+            fuga reiciendis! Quaerat quasi est mollitia repudiandae natus ipsa molestiae voluptatibus. Dolores inventore
+            distinctio, necessitatibus voluptatum earum obcaecati laboriosam sunt provident voluptas porro deserunt
+            sapiente perferendis tenetur consectetur molestiae odit! Ullam illum veritatis at iusto est ab numquam?
+            Inventore repudiandae veniam nisi quod, voluptatum cum esse quasi iure doloribus vel eligendi dolores
+            deserunt eos architecto, nemo veritatis maiores provident quas corporis dolor, nobis nostrum. Odio, tenetur
+            quae itaque praesentium minima a, nesciunt dolore reiciendis dolores deleniti vero autem mollitia soluta.
+            Blanditiis quasi perspiciatis, esse illo quidem doloribus delectus voluptatem voluptatibus nihil odio
+            placeat illum, commodi, quam sunt dolorum minima explicabo aliquam quod. Praesentium nisi earum corrupti
+            ducimus accusantium nesciunt voluptate delectus dolores asperiores voluptates, corporis, aliquid ratione.
+        </p>
+        <img src="https://pix10.agoda.net/hotelImages/4140104/-1/64d36be7dd5d1ffcedb7fa8e699a3b03.jpg?s=1024x768"
+            alt="maldive" />
+        <br />
+        <h2>Calculeaza pretul pentru sederea ta: </h2>
+        <label for="zile">Cate zile vrei sa stai?</label>
+        <input type="number" name="zile" />
+        <br/>
+        <label for="turisti" id="turisti">Cate persoane merg?(cu tot cu tine)</label>
+        <input type="range" name="turisti" min="0" max="6" />
+
+        <p>Pretul pe noapte/persoana este <span class="big-bold">20</span> de euro</p>
+        <h2>Totalul este: <span class="big-bold">X</span> euro</h2>
+
+        <button>Ascunde imaginea</button>
+        <button>Afiseaza imaginea</button>
+        <button>Creste dimensiuena scrisului (cu 5px)</button>
+        <button>Schimba culoarea div-ului cu id-ul "container"</button>
+        <button>Calculeaza pretul</button>
+
+        <hr/>
+        <div id="cerinte">
+
+        <h3>Cerinte:</h3>
+        <p>Fara sa modificati acest fisier HTML, trebuie sa:</p>
+        <ol>
+            <li>Va creati un fisier JS si sa-l legat de pagina(este singura modificare pe care aveti voie sa o faceti in acest HTML)</li>
+            <li>Va creati un obiect de tip JSON care sa contina detalii despre Maldive, Hawaii, Mexico City
+                (trebuie sa aveti o descriere, o imagine si un pret pe noapte pentru cazare)
+                Obs: Puteti avea si un array de obiecte, daca va este mai usor
+            </li>
+            <li>Sus de tot aveti un select cu cele 3 tari. Cand se alege o tara noua, se schimba informatiile din pagina.
+                (Adica se schimba imaginea, descrierea, pretul pe noapte etc ... proprietatile definite de voi in JSON)
+            </li>
+            <li>Implementati butoanele de mai sus:
+                <ul>
+                    <li>Ascunde imaingea/afiseaza imaginea - este evident ce fac</li>
+                    <li>Creste dimensiunea scrisului : pentru paragrafe. La FIECARE click se mai adauga inca 5px</li>
+                    <li>Schimba culoarea: trebuie sa schimbati culoarea div-ului in alta culoare.
+                        Se acorda puncte bonus daca generati o culoare random de fiecare data.
+                        (puteti cauta pe internet, dar ca exemplu, un mod de a scrie culoarea este folosing rgb(red,green,blue), unde
+                        red, green, blue sunt 3 numere intre [0,256].
+                        Ca sa generati o culoare random, de fapt aveti nevoie de 3 numere random.
+                        Cautati Math.random() )
+                    </li>
+                    <li>Calculeaza pretul - inmulteste numarul de zile cu pretul pe noapte/persona si cu numarul de persoane
+                        Rezultatul trebuie afisat in locul valorii "X", unde scrie Totalul este: X euro
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p style="color: red;">Nu se vor adauga alte clase, id-uri sau elemente in pagina HTML.
+        Daca va blocati la o cerinta, intrebati pe grupul de facebook si va dau indicatii.
+    Va rog sa descrieti cat mai clar problema si sa precizati cerinta la care aveti problema.
+Spor ! :) </p>
+    </div>
+    </div>
+</body>
+
+</html>

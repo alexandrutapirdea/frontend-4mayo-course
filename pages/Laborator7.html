@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>
+
+        Laborator Tehnici Web - FMI 2020
+
+    </title>
+
+    <link rel="shortcut icon" href="../css/images/icon.ico" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+
+
+    <!-- Bootstrap & Styles -->
+
+    <!--<link href="css/bootstrap4.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+
+    <link href="../css/animate.min.css" rel="stylesheet" />
+
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../css/outline.css" rel="stylesheet">
+    <link href="../css/custom-style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="prettify.css">
+    <link rel="stylesheet" href="/css/print.css" media="print">
+
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        hr {
+            display: block;
+            height: 0px;
+            border: 2px solid blueviolet;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+
+        @media print {
+            div.punctaj {
+                position: relative !important;
+                top: 0;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row" class="collapse navbar-collapse">
+            <div class="col-sm-3">
+                <div class="logo">
+                    <a href="../index.html"><img src="../css/images/logo.png" alt="LaboratorTW" />
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="col-sm-9" id="navbarSupportedContent">
+                <nav id="desktop-menu">
+                    <ul class="sf-menu" id="navigation">
+                        <li><a href="../index.html">Acasa</a>
+                        <li><a href="./Notare.html">Notare</a>
+                        </li>
+                        <li class="nav-link disabled"><a href="#">Laboratoare <i class="fa fa-sort-amount-asc"
+                                    aria-hidden="true"></i></a>
+                            <ul class="dropdown-ul">
+                                <li><a href="./Laborator1.html">Laborator 1</a></li>
+                                <li><a href="./Laborator2.html">Laborator 2</a></li>
+                                <li><a href="./Laborator2.html">Laborator 3</a></li>
+                                <li><a href="./Laborator4.html">Laborator 4</a></li>
+                                <li><a href="./Laborator5.html">Laborator 5</a></li>
+                                <li><a href="./Laborator6.html">Laborator 6</a></li>
+                                <li><a href="./Laborator7.html">Laborator 7</a></li>
+                                <li><a href="./Laborator8.html">Laborator 8</a></li>
+                                <li><a href="#">Laborator 9</a></li>
+                                <li><a href="./Cod_laboratoare/Laborator%2010/validariFormulare.html">Laborator 10</a>
+                                <li><a href="./Laborator10_NodeJS.html">Laborator
+                                        10_Node</a></li>
+                        </li>
+                    </ul>
+                    </li>
+                    <li><a href="./ProiectHML.html">Proiect HTML + CSS</a></li>
+                    <li><a href="ProiectJS.html">Proiect Javascript</a></li>
+                    </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-12 center-block">
+
+            <div style="text-align: center">
+                <h2>Laborator 7</h2>
+
+            </div>
+            <div class="message" style="margin-top:30px;">
+                <h3>Cuprins:</h3>
+                <ol>
+                    <li>ES6: const, let + explicatii despre scope</li>
+                    <li>Mini joc - taste apasate</li>
+                    <li>Evenimentul de click la o anumita locatie in pagina</li>
+                    <li>Tema :) </li>
+                </ol>
+                <p class="observatie">Obseratie: Acesta o sa fie un laborator ceva mai dificil. Am adaugat video-uri si
+                    trimiteri catre articole ca sa incerc sa-l fac cat de clar se poate.
+                    Totusi, ma astept sa aveti si unele intrebari la care n-am reusit sa raspund prin materialele din
+                    laborator.
+                    Din acest motiv va rog sa ma intrebati ce nu este clar cand parcurgeti laboratorul, iar eu o sa
+                    adaug intrebarile si raspunsurile intr-o sectiune de FAQ
+                </p>
+                <div>
+                    <div class="observatie" style="border:5px solid black; padding:10px;">
+                        <h2>Proiect Javascript</h2>
+                        <p>Cerintele sunt in curs de actualizare. O sa va anunt pe grupul de facebook cand am stabilit
+                            forma finala (ca sa va puteti apuca de lucru).</p>
+                        <h2>Note proiect HTML</h2>
+                        <p>Incerc duminica sa am toatele notele. Cand am terminat de verificat, o sa va pun lista pe
+                            grup.
+                        </p>
+                        <p>Proiectele care nu respecta TOATE cerintele eliminatorii (cele cu rosu din barem) nu o sa fie
+                            punctate si puteti sa le refaceti pana la finalul semestrului, cu penalizarea de 50% pentru
+                            depasirea deadline-ului.</p>
+                        <p>Daca stiti ca sunteti in situatia asta, puteti sa va apucati sa le refaceti deja.</p>
+                    </div>
+
+                    <h2>Diferenta dintre: var, let, const</h2>
+                    <p>In primul laborator de javascript am zis ca declaram toate variabilele folosin var.
+                        Asta era adevarat pana cand a aparut javascript ES6 (o "versiune" noua de javascript, aparuta in
+                        2015)
+                        ES6 a introdus multe notiuni noi, care ne ajuta sa programam mai usor si sa reducem codul
+                        duplicat.
+                        Ca alternativa pentru declararea variabilelor folosind var, au fost introduse 2 noi
+                        <i>keywords</i>, <i>let</i> si <i>const</i>
+                    </p>
+                    <p>Pentru a intelege exact diferenta dintre let si const, trebuie sa introducem mecanismul de
+                        <i>Scope</i> in javascript </p>
+
+                    <h2>Am facut cateva video-uri ca in care explic destul de simplu cum functioneaza scope-ul:</h2>
+                    <h3 class="observatie">Acesta este canalul de youtube unde o sa pun toate video-urile care urmeaza.
+                        Puteti sa dati subscribe daca vreti sa primiti notificare cand incarc un video nou.
+                        Oricum, voi posta pe grupul de facebook atunci cand este cazul.
+                    </h3>
+                    <h3>1. Scope:</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KQyLy5Dobpw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <hr />
+
+                    <h3>2. Diferenta dintre var si const</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1gB2XBIOg30" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <hr />
+
+                    <h3>3. Diferenta dintre var si let </h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9wJOwhtCf7g" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <hr />
+                    <h3>4. Cand folosim var, let sau const ?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/eNzdf5UNz_Y" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <hr />
+
+                    Daca inca mai este ceva neclar, va recomand urmatorul articol (nu e facut de mine, deci poate va
+                    explica ceva diferit de cum am incercat eu) <a href="https://tylermcginnis.com/var-let-const/"
+                        target="_blank">Articol online despre var let const</a>
+                </div>
+
+                <h2>Mini joc - evenimente de taste apasate + click</h2>
+
+                <h3>Vom dezvolta impreuna un "mini-joc" ! Acum va prezint imaginea de ansamblu</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GjrN2uIGeL8" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <hr />
+                <h3>Explicarea codului existent + indicatii pentru tema(aveti de adaugat niste functionalitati noi)</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Nogb9G19Pv0" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <p class="observatie">
+                    O sa mai introducem pana la finalul laboratoarelor cateva functionalitati noi din ES6 (arrow
+                    functions, spread/rest operator, destrucuring)
+                    si daca ne mai ramane timp, chiar si async await din ES7.
+                    Daca vreti sa cititi inainte, va recoamand 100% aceasta carte (o puteti descarca in PDF gratuit):
+                    <br />
+                    <a href="https://legacy.gitbook.com/book/escher/you-don-t-know-js-es6-beyond/details"
+                        target="_blank">Carte ES6 - You don't know JS</a>
+                </p>
+                <div class="tema">
+                    <h2>Tema</h2>
+                    <p>Ca sa puteti rezolva tema, veti avea nevoie de fisierele HTML si JS din video. Le puteti descarca
+                        de aici:</p>
+                    <a href="../temporar.html" target="_blank" download="temporar.html"
+                        type="application/octet-stream">Download fisier HTML</a>
+                    <br />
+                    <a href="../temporar.js" download="yasuo.png" target="_blank"
+                        type="application/octet-stream">Download fisier JS</a>
+                    <p>Aveti cerintele explicate in video. O sa las si aici o lista, dar urmariti ultimele 2 video-uri
+                        pentru detalii.</p>
+                    <ol>
+                        <li>Miscarea prin sageti pentru al doilea personaj (Lux)</li>
+                        <li>Persoanjul nu poate sa "iasa din ecran" nici sus/jos (in video am implementat deja pentru
+                            stanga-dreapta).
+                            Este valabil pentru ambele personaje
+                        </li>
+                        <li>Meniul de setari (viteza de deplasare, skin) - aveti in video explicat ce trebuie sa faca
+                        </li>
+                        <li>
+                            Adaugarea unei comori/bombe. (vezi video)
+                        </li>
+                        <li>Schimbarea background-ului la space, random (OBS: la fiecare noua apasare a tastei space,
+                            apare o alta imagine).
+                            Hint: Eu am folosit https://picsum.photos/ pentru imagini random. Exista si alte site-uri
+                            asemanatoare.
+                        </li>
+                        <li>Orice mai apare in video, dar am uitat sa scriu aici (daca mai e ceva)</li>
+                    </ol>
+                    <p>Deadline: joi, 30 aprilie, ora 23:59</p>
+                    <p>Temele se incarca <a
+                            href="https://drive.google.com/drive/folders/1ByHI8GfriTP2Rj0PB3Cmp0DvVW983xQI"
+                            target="_blank">Aici</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--  Footer -->
+
+
+        <section class="footer fixed-bottom">
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="container">
+                                <p class="text-center" style="color: white">Copyright &copy; 2020 Alexandru
+                                    Tapirdea.
+                                    All
+                                    Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/superfish.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/custom.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+        <script>
+            function showHide(event) {
+                var hint = document.querySelector("#hint");
+                console.log("hint", hint)
+                hint.classList.toggle("hide");
+            }
+        </script>
+</body>
+
+</html>
