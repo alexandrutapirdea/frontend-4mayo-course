@@ -5,11 +5,11 @@ class Navbar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-    <div class="top navbar navbar-expand-lg navbar-light bg-light">
+    <div class="top navbar navbar-expand-lg navbar-light bg-light custom-navbar">
     <div class="row" class="collapse navbar-collapse">
         <div class="col-sm-3">
             <div class="logo">
-                <a href="../index.html"><img src="./css/images/logo.png" alt="LaboratorTW" />
+                <a href="../index.html"><img src="../css/images/logo.png" alt="FrontendJourney" />
                 </a>
             </div>
         </div>
