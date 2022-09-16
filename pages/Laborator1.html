@@ -50,86 +50,129 @@
           <h2>Curs 1 - HTML</h2>
         </div>
         <div class="message">
-          <p>
-            S-a discutat despre
-            <a href="Notare.html" target="=_blank">Notare</a> si despre HTML
-          </p>
-          <p>
-            <span class="bold"
-              >Pe Drive cu materiale:
-              <a
-                href="https://drive.google.com/open?id=1wVbK2bhqQJjGSSkvGZORXRcPKo4PjgPY"
-                target="_blank"
-                >Google Drive</a
-              ></span
-            >
-            gasiti pdf-ul cu tot ce am lucrat la laborator si codul sursa
-            complet
-          </p>
-          <p>
-            Rezultatul din primul laborator :
-            <a href="./Cod_laboratoare/Cod_lab1.html">Laborator 1</a>
-          </p>
-          <p>Pe partea de HTML am invatat :</p>
+          <h3>Cuprins:</h3>
           <ol>
-            <li>Structura unei pagini HTML</li>
+              <li>Privire de ansamblu</li>
+              <li>Ce este HTML ? Cum arata o pagina HTML ?</li>
+              <li>Cele mai utilizate tag-uri din HTML</li>
+              <li>Tema :) </li>
+          <h3 style="margin-top: 40px;">Imagine de ansamblu</h3>
+          <img
+            src="./images/Curs_1_ansamblu.png"
+            alt="Imagine HTML CSS JS corpul uman"
+          />
+          <p>
+            In urmatoarele 12 cursuri vom discuta despre HTML, CSS si
+            Javascript(JS).
+          </p>
+          <ul>
             <li>
-              Tag Titlu-pagina : <code>&lt;title>Pagina mea&lt;/title></code>
+              HTML(<b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage): Nu
+              este un limbaj de programare, ci un limbaj de "markup". El ne
+              ajuta sa definim ce elemente apar intr-o site. Imaginea pe care o
+              vedeti mai sus sau paragraful pe care il cititi acum sunt definite
+              folosind HTML. Practic, cu HTML definim structura("scheletul")
+              paginii noastre. Doar cu HTML site-ul pe pe care suntem acum ar
+              arata asa:
             </li>
-            <li>Incarcarea unui favicon</li>
+            <img
+              src="./images/Curs_1_doar_html.PNG"
+              alt="Cum arata site-ul fara CSS si JS"
+            />
             <li>
-              Tag heading: h1,h2...h6
-              <code>&lt;h1>Cea mai noua descoperire in medicina !&lt;/h1></code>
-            </li>
-            <li>
-              Tag paragraf : p
-              <code
-                >&lt;p>Eu sunt un paragraf. O sa ma folosesti foarte
-                des&lt;/p></code
-              >
-            </li>
-            <li>
-              Tag span
-              <code
-                >&lt;p>Eu sunt anul 3 la &lt;span
-                style="color:red">Mate-Info&lt;/span>&lt;/p>
-                <p>
-                  Eu sunt anul 3 la <span style="color: red">Mate-Info</span>
-                </p></code
-              >
+              CSS(<b>C</b>ascading<b>S</b>tyle <b>S</b>heets): Nu este un limbaj
+              de programare. Il folosim ca facem site-ul sa arate bine.(culori,
+              demensiunea scrisului, pozitia pozelor etc)
             </li>
             <li>
-              Tag pentru imagini : img
-              <code
-                >&lt;img src="calea catre imagine" alt="mesaj care apare cand nu
-                avem internet sau src nu duce nicaieri" /></code
-              >
+              Javascript: Este un limbaj de programare, dar nu are nicio
+              legatura cu JAVA.(JAVA este alt limbaj de programare complet
+              diferit). Il folosim ca sa adaugam interactiune pentru site-ul
+              nostre. De exemplu, cu Javascript controlam ce se intampla cand
+              apesi pe butonul "Adauga in cos" sau pe "Login".
             </li>
-            <li>
-              Comentarea codului :
-              <code> &lt;!-- Acesta este un comentariu; --></code>
-            </li>
-            <li>Liste neordonate : &lt;ul>&lt;/ul></li>
-            <li>Liste ordonate : &lt;ol>&lt;/ol></li>
-            <li>Link : &lt;a>&lt;/a></li>
-            <li>Input : &lt;input>&lt;/input></li>
-            <li>Input : &lt;table>&lt;/table></li>
-          </ol>
-
-          <h2 class="observatie">Tema:</h2>
-          <p class="bold">
-            Sa lucrati la CV-ul vostru folosind tag-urile invatate in primul
-            laborator. Cei care ati predat tema din laborator nu trebuie sa mai
-            trimiteti nimic.
-            <i>Deadline: Urmatorul laborator, finalul zilei.</i>
+          </ul>
+          <h3>Setup</h3>
+          <p>
+            Pentru inceput vom avea nevoie sa instalam Visual Studio Code (este
+            gratuit).
+            <a href="https://code.visualstudio.com/" target="_blank"
+              >Link catre VSCode</a
+            >
+          </p>
+          <p>
+            Ca alternativa mai la VSCode exista si WebStorm, dar acesta nu este
+            gratuit. Puteti sa-l incercati timp de 30 de zile inainte sa-l
+            cumparati. Noi o sa folosim VSCode in cadrul cursului.
+            <a href="https://www.jetbrains.com/webstorm/" target="_blank"
+              >Link catre WebStorm</a
+            >
           </p>
 
-          <p class="observatie">
-            Inainte sa trimiteti o tema sau un proiect, validati fisierul HTML
-            folosind
-            <a href="https://validator.w3.org/#validate_by_input"
-              >HTML validator</a
-            >. Se pierd puncte pentru erori de validare
+          <h3>HTML</h3>
+          <p>
+            Mai departe vom discua despre HTML si veti scrie cod pentru data.
+            Inainte sa incepem sa scriem cod este important sa stim 2 lucruri:
+          </p>
+          <p>I) HTML este format din TAG-URI.</p>
+          <img
+            src="./images/Curs_1_structura_unui_tag_html.png"
+            alt="structura unui tag html"
+          />
+          <p>II) Structura unei pagini HTML</p>
+          <img
+            src="./images/Curs_1_structura_unei_pagini_html.PNG"
+            alt="structura unei pagini HTML"
+          />
+          <h4>Hai sa scriem cod</h4>
+          <p>1) Deschideti VSCode si creati un fisier nou numit "Curs1.html"</p>
+          <p
+            class="codepen"
+            data-height="300"
+            data-default-tab="html,result"
+            data-slug-hash="oNdZYXQ"
+            data-user="TapirdeaAlexandru"
+            style="
+              height: 300px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid;
+              margin: 1em 0;
+              padding: 1em;
+            "
+          >
+            <span
+              >See the Pen
+              <a href="https://codepen.io/TapirdeaAlexandru/pen/oNdZYXQ">
+                Untitled</a
+              >
+              by Tapirdea Alexandru (<a
+                href="https://codepen.io/TapirdeaAlexandru"
+                >@TapirdeaAlexandru</a
+              >) on <a href="https://codepen.io">CodePen</a>.</span
+            >
+
+            <h2>Rezultatul final</h2>
+            <p class="codepen" data-height="600" data-default-tab="html,result" data-slug-hash="xxjqRRa" data-user="TapirdeaAlexandru" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"></p>
+            <div class="exercitiu">
+              <h4>Tema</h4>
+              <img src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+                  style="width: 50px;display: inline;" />
+              <p>Lucrati la CV-ul vostru, in HTML, folosind cat mai multe din tag-urile discutate astazi:</p>
+              <p>In plus, cititi despre urmatoarele tag-uri si folositile-le in CV-ul vostru(chiar daca in mod normal nu ati pune de exemplu un video in CV):</p>
+              <ol>
+                <li>audio</li>
+                <li>video</li>
+                <li>iframe</li>
+              </ol>
+              </ul>
+              <p>Incarcati tema pe codepen(trebuie sa va faceti cont, dar e gratuit) si trimite un email pe tapirdea.alexandru@yahoo.com</p>
+              <p>Gasiti aici explicatii pentru tag-urile de mai sus:</p>
+              <a style="color:blue;text-decoration: underline;" href="https://www.w3schools.com/tags/" target="_blank">LINK EXPLICATII</a>
+
+          </div>
           </p>
         </div>
       </div>
@@ -140,6 +183,10 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/superfish.min.js"></script>
     <script src="../js/wow.min.js"></script>
+    <script
+      async
+      src="https://cpwebassets.codepen.io/assets/embed/ei.js"
+    ></script>
     <script src="../js/custom.js"></script>
   </body>
 </html>

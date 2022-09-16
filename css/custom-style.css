@@ -178,3 +178,7 @@ div.cerinte li {
 .custom-navbar .sf-menu li.current ul li a {
   background-color: #0d3c64 !important;
 }
+
+img {
+  margin: 20px;
+}

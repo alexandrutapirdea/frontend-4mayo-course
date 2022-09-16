@@ -26,14 +26,13 @@
 
 body {
   background: #fff;
-  color: #5a5a5a;
+  color: black;
   font-family: "Open Sans", arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
   margin: 0;
   position: relative;
-  webkit-font-smoothing: antialiased;
 }
 
 .stickyarea {
@@ -110,7 +109,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #5a5a5a;
+  color: black;
   font-family: "Roboto Slab", arial, sans-serif;
   font-weight: 700;
   line-height: 1.1;

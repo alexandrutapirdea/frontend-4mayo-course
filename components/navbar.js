@@ -5,6 +5,141 @@ class Navbar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
+    <style>
+    /* pre {
+background: #f4f4f4;
+border: 1px solid #ddd;
+border-left: 3px solid #f36d33 !important;
+color: #666;
+page-break-inside: avoid;
+font-family: monospace;
+font-size: 15px;
+line-height: 1.6;
+margin-bottom: 1.6em;
+max-width: 100%;
+overflow: auto;
+padding: 1em 1.5em;
+display: block;
+word-wrap: break-word;
+}  */
+
+    .hide {
+        display: none;
+    }
+
+    pre.prettyprint {
+        display: block;
+        background-color: #333
+    }
+
+    pre .nocode {
+        background-color: none;
+        color: #000
+    }
+
+    pre .str {
+        color: #ffa0a0
+    }
+
+    /* string  - pink */
+    pre .kwd {
+        color: #f0e68c;
+        font-weight: bold
+    }
+
+    pre .com {
+        color: #87ceeb
+    }
+
+    /* comment - skyblue */
+    pre .typ {
+        color: #98fb98
+    }
+
+    /* type    - lightgreen */
+    pre .lit {
+        color: #cd5c5c
+    }
+
+    /* literal - darkred */
+    pre .pun {
+        color: #fff
+    }
+
+    /* punctuation */
+    pre .pln {
+        color: #fff
+    }
+
+    /* plaintext */
+    pre .tag {
+        color: #f0e68c;
+        font-weight: bold
+    }
+
+    /* html/xml tag    - lightyellow */
+    pre .atn {
+        color: #bdb76b;
+        font-weight: bold
+    }
+
+    /* attribute name  - khaki */
+    pre .atv {
+        color: #ffa0a0
+    }
+
+    /* attribute value - pink */
+    pre .dec {
+        color: #98fb98
+    }
+
+    /* decimal         - lightgreen */
+
+    /* Specify class=linenums on a pre to get line numbering */
+    ol.linenums {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #AEAEAE
+    }
+
+    /* IE indents via margin-left */
+    li.L0,
+    li.L1,
+    li.L2,
+    li.L3,
+    li.L5,
+    li.L6,
+    li.L7,
+    li.L8 {
+        list-style-type: none
+    }
+
+    /* Alternate shading for lines */
+    li.L1,
+    li.L3,
+    li.L5,
+    li.L7,
+    li.L9 {}
+
+    li.L0,
+    li.L1,
+    li.L2,
+    li.L3,
+    li.L5,
+    li.L6,
+    li.L7,
+    li.L8 {
+        list-style-type: decimal !important;
+    }
+
+    li.L1,
+    li.L3,
+    li.L5,
+    li.L7,
+    li.L9 {
+        background: inherit !important;
+    }
+</style>
     <div class="top navbar navbar-expand-lg navbar-light bg-light custom-navbar">
     <div class="custom-row" class="collapse navbar-collapse">
         <div class="col-sm-3">
