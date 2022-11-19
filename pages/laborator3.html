@@ -46,15 +46,41 @@
     <div class="row" style="margin-top: 100px">
       <div class="col-sm-12 center-block">
         <div style="text-align: center">
-          <h2>Laborator 3</h2>
+          <h2>Curs 3</h2>
         </div>
         <div class="message">
           <div>
+            <h1>Cum adaugam CSS intr-o pagina ?</h1>
+            <p>Exista 3 moduri de a scrie CSS</p>
+            <ol>
+              <li>
+                Stil inline: Folosind atributul style, direct pe fiecare element
+              </li>
+              <xmp>
+                <div style="background-color: red;"></div>
+            </xmp>
+              <li>In interiorul tag-ului head, unde definim un tag style:</li>
+              <xmp>
+                <head>
+                     <style>
+                      body{
+                        background-color: blue;
+                      }
+                     </style>
+                </head>
+            </xmp>
+              <li>
+                Cea mai indicata metoda: Facem un fisier nou cu extensia .css
+                si-l conectam la pagina noastra HTML
+              </li>
+            </ol>
+            <p>Vom vedea imeadiat un exemplu pentru fiecare stil in parte</p>
+            <h2>
+              Acum vom scriem impreuna cod CSS --> Intrebati un coleg ce s-a
+              lucrat daca ati lipsit
+            </h2>
+            <hr />
             <h1>Selectorii de css</h1>
-            <p>
-              Data trecuta am vorbit pe scurt despre diferiti tipi de selectori
-              de css precum clasa, tag si id
-            </p>
             <p>
               In limbajul css, fiecarui tip de selector ii e atribuit un simbol.
             </p>
@@ -333,10 +359,27 @@
               >Tutorial animatii</a
             >
           </p>
-          <b
-            >Tema: Folositi atributele de pozitionare pentru a stiliza CV-ul din
-            temele anterioare. Bonus pentru animatii</b
-          >
+          <div class="exercitiu">
+            <h4>Tema</h4>
+            <img
+              src="https://i.pinimg.com/originals/ce/c4/79/cec4795ab42ec0c616409e791063d7f9.gif"
+              style="width: 50px; display: inline"
+            />
+            <p>
+              Folositi CSS ca sa stilizati CV-ul pe care l-ati facut in HTML.
+              Veti avea un fisier extern cu extensia .css. Incercati sa folositi
+              cat mai multe proprietati discutate pana acum si aveti liberatatea
+              sa folositi orice alte proprietati vreti.
+            </p>
+            <p>
+              Adaugati si o animatie, chiar daca nu e foarte serioasa.(si n-ati
+              pune una in mod normal in CV)
+            </p>
+            <p>
+              Veti face un branch nou si un PR pentru tema, unde ne puneti pe
+              noi la review(Bogdan, Alex)
+            </p>
+          </div>
         </div>
       </div>
     </div>

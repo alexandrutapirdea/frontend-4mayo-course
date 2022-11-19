@@ -26,6 +26,14 @@
       crossorigin="anonymous"
     />
 
+    <style>
+      i {
+        color: rebeccapurple;
+        font-size: 24px !important;
+        font-weight: bold;
+      }
+    </style>
+
     <link href="../css/bootstrap-theme.css" rel="stylesheet" />
 
     <link href="../css/animate.min.css" rel="stylesheet" />
@@ -45,7 +53,7 @@
     <div class="row" style="margin-top: 100px" style="margin-top: 100px">
       <div class="col-sm-12 center-block">
         <div style="text-align: center">
-          <h2>Laborator 2</h2>
+          <h2>Curs 2</h2>
         </div>
         <div class="message">
           <h2>GIT & Github</h2>
@@ -54,30 +62,133 @@
             putem sa ne tinem codul doar pe laptop-ul nostru.(pentru ca si alte
             persoane vor sa-l modifice).
           </p>
-          <p>Diferenta dintre Git si Github</p>
           <p>
-            Pentru asta o sa folosim:
-            <a href="https://github.com/" target="_blank">Github.</a>
+            GIT este un sistem de versionare a fisierelor. Toate comenzile pe
+            care le invatam astazi sunt comenzi de git
+          </p>
+          <p>
+            Github este website-ul (interfata grafica) pe care il vom folosi.
+            Este locul unde sunt salvate fisierele.
+          </p>
+          <p>
+            Exista si alte site-uri pe langa Github care fac acelasi lucru, dar
+            sunt dezvoltate de alte firme. Github e detinut de Microsoft
+          </p>
+          <p>Cele mai populare alternative la Github sunt:</p>
+          <p>
+            <a href="https://bitbucket.org/product" target="_blank"
+              >Bitbucket</a
+            >
+          </p>
+          <p>
+            <a href="https://about.gitlab.com/" target="_blank">Gitlab</a>
+          </p>
+
+          <p>
+            Noi o sa folosim Github
+            <a href="https://github.com/" target="_blank">Github</a>
             Pentru inceput sa-si creeze toata lumea un cont.
           </p>
-          <h2>Cele mai folosite comenzi din Github:</h2>
-          <p>TODO: Sa scriu despre:</p>
+          <h2>Cum clonam un proiect ?</h2>
           <p>
-            Foloseste ca exemplu de repository open-source(vorbeste despre
-            open-source putin) chiar cel pentru VSCode de la Microsoft:
-            https://github.com/microsoft/vscode
+            O sa clonam codul de la VSCode, editorul pe care l-am instalat in
+            primul curs:
           </p>
+          <a href="https://github.com/microsoft/vscode"
+            >VSCode Github Repository</a
+          >
+          <img src="./images/curs2_clonare_github.PNG" alt="clonare github" />
+          <p>vom rula <i>git clone https://github.com/microsoft/vscode</i></p>
+
+          <h2>Configurare username, email si parola pentru git</h2>
+          <p>Vom deschide un terminal (putem si din vscode) si vom rula</p>
+          <p>
+            Configurare username
+            <i>git config --global user.name "your username"</i>
+          </p>
+          <p>
+            Configurare email <i>git config --global user.email "your email"</i>
+          </p>
+          <p>
+            Configurare password
+            <i>git config --global user.password "your password"</i>
+          </p>
+          <h2>Cum facem un proiect nou ?</h2>
+
+          <p>Prima data vom face un repository nou pe github</p>
+          <img
+            src="./images/curs_2_github_proiect_nou.PNG"
+            alt="clonare github"
+          />
+          <p>Prima data vom face un folder nou unde vrem noi</p>
+          <p>
+            Deschidem un terminal(putem si din vscode) si rulam comenzile de pe
+            pagina de github. Puteti sa le luati cu copy paste
+          </p>
+          <img src="./images/curs_2_github_comenzi.PNG" alt="clonare github" />
+
+          <h2>Hai sa vedem github in actiune:</h2>
           <ol>
-            <li>Configure username and password</li>
-            <li>git init</li>
-            <li>git add.</li>
-            <li>git commit</li>
-            <li>git push</li>
-            <li>ammend and force push</li>
-            <li>git pull</li>
-            <li>git checkout -b "nume branch"</li>
-            <li>Ce este si cum se face un PR</li>
-            <li>Cum se face code review</li>
+            <li>
+              Vom crea in folderul nostru un nou fisier HTML. Vom incerca sa
+              reproducem pagina urmatoare. Este pagina Wikipedia despre NASA.
+              Puteti lua textul cu copy paste de acolo
+              <a href="https://en.wikipedia.org/wiki/NASA">Link Articol NASA</a>
+              <img src="./images/curs_2_github_nasa.PNG" />
+            </li>
+            <li>
+              Vom face un commit cu textul "Implementare design pagina NASA"
+            </li>
+            <li>Dam push la commit in repository</li>
+            <li>
+              Vrem sa schimbam imaginea din pagina noastra HTML cu o poza cu o
+              girafa. Cautati ce poza vreti pe internet si faceti un nou commit
+              cu textul "Actualizare imagine". Dati push la noua modificare.
+            </li>
+            <li>
+              Clonati proiectul creat de alt coleg(vom pune link-urile in chat)
+            </li>
+            <li>
+              Nu puteti modifica alt proiect daca nu sunteti adaugi drept
+              colaboratori din setarile proiectului. Vom adauga acum alt coleg
+              colaborator.
+              <img src="./images/curs_2_adaugare_colaboratori.PNG" />
+            </li>
+            <li>
+              Vom face un branch nou numit "numelePrenume/modificare-buget"(ex:
+              bogdanNitica/modificare-buget). Folosim comanda:
+              <p><i>git checkout -b "numePrenume/modificare-buget"</i></p>
+            </li>
+            <li>
+              Vom modifica cifrele din tabel cu vrem noi si dam push pe
+              branch-ul nostru
+            </li>
+            <li>
+              Vom face un Pull Request din interfata Github (prescurtat se
+              numeste PR). O sa mai auziti Merge Request(prescurat MR). Inseaman
+              acelasi lucru
+            </li>
+            <li>
+              Colegul vostru care a creat proiectul va aproba modificarea si va
+              face merge.
+            </li>
+            <li>
+              Dupa merge ne mutam pe branch-ul numit "main" si actualizam codul
+              nostru local folosind comanda:
+              <p><i>git pull</i></p>
+            </li>
+            <li>
+              Felicitari ! Asta este procesul prin care programatorii trec de
+              fiecare data cand modifica ceva nou in aplicatie.
+            </li>
+            <li>
+              De acum inainte pentru temele de acasa o sa folosim github.
+              Fiecare dintre voi o sa-si faca un repository nou numit
+              teme-curs-frontend. Pentru fiecare tema veti avea un branch nou
+              (il numiti cum vreti voi, de exemplu "tema-2") si creati un pull
+              request. Adaugati-ne pe noi(Alex, Bogdan) ca review-er din
+              interfata Github.
+            </li>
           </ol>
         </div>
       </div>
