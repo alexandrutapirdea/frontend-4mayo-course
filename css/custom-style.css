@@ -182,3 +182,8 @@ div.cerinte li {
 img {
   margin: 20px;
 }
+
+#feedback-iframe {
+  width: 100% !important;
+  height: 500px !important;
+}

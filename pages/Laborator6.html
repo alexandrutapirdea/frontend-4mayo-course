@@ -35,6 +35,141 @@
     <link rel="stylesheet" type="text/css" href="prettify.css">
     <script src="../components/navbar.js" type="text/javascript" defer></script>
 
+    <style>
+        /* pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33 !important;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}  */
+
+        .hide {
+            display: none;
+        }
+
+        pre.prettyprint {
+            display: block;
+            background-color: #333
+        }
+
+        pre .nocode {
+            background-color: none;
+            color: #000
+        }
+
+        pre .str {
+            color: #ffa0a0
+        }
+
+        /* string  - pink */
+        pre .kwd {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        pre .com {
+            color: #87ceeb
+        }
+
+        /* comment - skyblue */
+        pre .typ {
+            color: #98fb98
+        }
+
+        /* type    - lightgreen */
+        pre .lit {
+            color: #cd5c5c
+        }
+
+        /* literal - darkred */
+        pre .pun {
+            color: #fff
+        }
+
+        /* punctuation */
+        pre .pln {
+            color: #fff
+        }
+
+        /* plaintext */
+        pre .tag {
+            color: #f0e68c;
+            font-weight: bold
+        }
+
+        /* html/xml tag    - lightyellow */
+        pre .atn {
+            color: #bdb76b;
+            font-weight: bold
+        }
+
+        /* attribute name  - khaki */
+        pre .atv {
+            color: #ffa0a0
+        }
+
+        /* attribute value - pink */
+        pre .dec {
+            color: #98fb98
+        }
+
+        /* decimal         - lightgreen */
+
+        /* Specify class=linenums on a pre to get line numbering */
+        ol.linenums {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #AEAEAE
+        }
+
+        /* IE indents via margin-left */
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: none
+        }
+
+        /* Alternate shading for lines */
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {}
+
+        li.L0,
+        li.L1,
+        li.L2,
+        li.L3,
+        li.L5,
+        li.L6,
+        li.L7,
+        li.L8 {
+            list-style-type: decimal !important;
+        }
+
+        li.L1,
+        li.L3,
+        li.L5,
+        li.L7,
+        li.L9 {
+            background: inherit !important;
+        }
+    </style>
 
 
 
@@ -65,21 +200,7 @@
                     <li>Tema :) </li>
                 </ol>
                 <div>
-                    <div class="observatie" style="border:5px solid black; padding:5px;">
-                        <h2>Anunt: PROIECTUL de HTML&CSS</h2>
-                        <p>Nu uitati de proiectul de HTML si CSS. <span style="font-weight: bold;"> Deadline-ul este 10
-                                aprilie</span> </p>
-                        <p>Daca vreti sa primiti feedback pentru ce ati facut pana acum, va rog sa-mi trimiteti
-                            proiectele <span style="font-weight: bold;">pana cel tarziu vineri, 3 aprilie</span></p>
-                        <p>Cei care imi trimit proiectele pana pe 3 aprilie(inclusiv) o sa primeasca un punctaj
-                            provizoriu si o lista cu subiectele unde ati fost depunctati.(ca sa completati cu ce mai
-                            trebuie pana la deadline)
-                        </p>
-                        <p>Daca imi trimiteti proiectele dupa data de 3 aprilie, o sa va trimit direct punctajul
-                            obtinut, dar nu mai puteti modifica acolo unde pierdeti puncte </p>
-                        <p>Cerintele complete si un calculator pentru punctaj se gaseste aici: <a
-                                href="./ProiectHML.html">Proiect HTML + CSS</a></p>
-                    </div>
+           
                     <h2>Despre DOM?</h2>
                     <p>O sa folosim destul de des notiunea de "document" cand discutam de javascript.
                         Va puteti gandi la "document" ca la un obiect JSON foarte mare, care contine toate elementele
@@ -87,9 +208,7 @@
                         (precum si alte date, ca de exemplu evenimentele de browser, adresa URL (locatia) pe care suntem
                         etc)
                     </p>
-                    <p> Pentru niste explicatii mai detaliate, puteti sa cititi in cursul <a
-                            href="https://sites.google.com/site/fmitehniciweb/notare" target="_blank">Curs 6</a>
-                    </p>
+         
                     <p>Sa consideram urmatorul exemplu</p>
                     <img src="../css/images/DOM.jpg" style="width: 150%;margin-bottom: 20px;" />
                     <p>In partea stanga aveti codul HTML al unei pagini simple, iar in partea dreapta reprezentarea
