@@ -31,9 +31,9 @@ class Navbar extends HTMLElement {
           <li><a href="./Laborator1.html" class="dropdown-item">Curs 1 - Introducere + HTML</a></li>
           <li><a href="./Laborator2.html" class="dropdown-item">Curs 2 - HTML + GIT</a></li>
           <li><a href="./laborator3.html" class="dropdown-item">Curs 3 - Introducere in CSS</a></li>
-          <li><a href="./Laborator4.html" class="dropdown-item">Curs 4 - CSS (media query)</a></li>
-          <li><a href="./Laborator5.html" class="dropdown-item">Curs 5 - CSS (Flexbox, Forms, Bootstrap) </a></li>
-          <li><a href="./Laborator6.html" class="dropdown-item">Curs 6 - Introducere in Javascript</a></li>
+          <li><a href="./Laborator4.html" class="dropdown-item">Curs 4 - CSS (media query, Flexbox,Bootstrap)</a></li>
+          <li><a href="./Laborator5.html" class="dropdown-item">Curs 5 - Introducere in Javascript </a></li>
+          <li><a href="./Laborator6.html" class="dropdown-item">Curs 6 - Javascript - partea 2</a></li>
           <li><a href="./Laborator7.html" class="dropdown-item">Curs 7 - JS(if, switch, loops) </a></li>
           <li><a href="./Laborator8.html" class="dropdown-item">Curs 8 - Interactiunea HTML, CSS, JS</a></li>
           <li><a href="./Laborator9.html" class="dropdown-item">Curs 9 - Interactiunea HTML, CSS, JS</a></li>

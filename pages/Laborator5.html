@@ -284,76 +284,34 @@
                         </li>
                     </ol>
 
-                    <h3>Metode pentru array: </h3>
+                    <h3>Instructiunea IF; == vs ===</h3>
                     <pre class="prettyprint lang-js linenums">
-                            // Consideram urmatorul array:
-                            var myArr = [1,2,3,4,5];
+                        // == verifica valoarea, fara sa tina cont de tipul de date
+                        5 == 5  // true 
+                        5 == "5" // true, nu conteaza ca unul este int si altul string
 
-                            // myArr.length : dimensiunea unui array
-                            console.log(myArr.length) // 6
+                        // apar unele situatii neobisnuite
 
-                            // Parcurgerea unui array
-                            for( i = 0; i < myArr.length; i++){
-                                console.log("elementul :", myArr[i]);
-                            }
+                        0 == false // true
+                        0 == [] //true
+                        0 == {} // false 
 
-                            // Adaugarea unui element in array:
-                            myArr.push(20); // adauga numarul 20 la finalul array-ului.
+                        // === verifica valoarea, inclusiv tipul de date
+                        5 === 5  // true 
+                        5 === "5" // false pentru ca sunt tipuri de date diferite
 
-                            //Eliminarea ultimului element din array
-                            myArr.pop();
-                            
-                            // forEach : o metoda mai eleganta de a parcurge un array
-                            // o sa discutam mai mult in laboratoarele urmatoarea despre forEach 
+                        // Instructiunea IF 
 
-                            myArr.forEach(function(element){
-                                console.log("elementul este", element)
-                            })
+                        if( a >= b){
+                            console.log("a este mai mare sau egal cu b");
+                        }
+                        else{
+                            console.log("b este mai mare decat a");
+                        }
+
                     </pre>
-
-                    <h3>JSON (JavaScript Object Notation) </h3>
-                    <p>Este cel mai folosit tip de date; Are o structura cheie - valoare</p>
-                    <pre class="prettyprint lang-js linenums">
-
-                        // Exista 2 moduri de a crea un obiect nou:
-
-                        var myObject = new Object(); // varianta mai putin folosita
-                        var myObject2 = {};   // varianta folosita mai des, pentru rapiditate
-
-                        var student = {
-                            "nume":"Ion",
-                            "prenume": "Popescu",
-                            "age":19,
-                            "pasiuni": ["Citit","Statul in casa - COVID 19","Javascript"]
-                            "note": {
-                              "analiza":9,
-                              "algebra":8,
-                              "tehniciWeb":"restanta"
-                            }
-                           } 
-                           // Obseram structura de cheie valoare; 
-                           // Toate acestea se numesc PROPRIETATI ale obiectului
-                           // Observam ca proprietatea "note" este la randul sau un obiect
-
-                           // Accesarea unei proprietati:
-
-                           console.log("first name is",student.nume) // Ion
-                           console.log("Nota la algebra este",student.note.analiza) // Ion
-
-                           // Adaugarea unei proprietati noi:
-
-                           student.numarRestante = 4;
-                    </pre>
-
-                    <p>Observatii</p>
-                    <ol>
-                        <li class="observatie">O sa folosim obiectele foarte des, in tote laboratoarele de acum inainte
-                        </li>
-                        <li class="observatie">JSON este modul standard prin care putem comunica cu partea de
-                            Backend(server)</li>
-                        <li class="observatie">Noi vom trimite obiecte JSON catre Node.js si vom primi inapoi date, tot
-                            sub forma de obiecte</li>
-                    </ol>
+                    <p>Un tabel complet cu diferenta dintre == si === gasiti aici <a
+                            href="https://dorey.github.io/JavaScript-Equality-Table/" target="_blank">AICI</a></p>
 
                     <h3>Functii </h3>
 
@@ -415,34 +373,94 @@
 
                     </pre>
 
-                    <h3>Instructiunea IF; == vs ===</h3>
+                    <ol> Exercitii
+                        <li>Scrieti o functie suma(primulNumar,alDoileaNumar) care primeste ca parametru 2 numere si calculeaza suma lor</li>
+                        <li>Scrieti o functie numita esteMaiMare(primulNumar,alDoileaNumar) care primeste ca parametru 2 numere si le compara. Returneaza true daca primulNumar este mai mare sau false in caz contrar.</li>
+                        <li>Scrieti o functie concatenareCuvinte(primulCuvant,alDoileaCuvant) care contacateneaza 2 cuvinte</li>
+                        <li>Scrieti o functie estePar(numar) care returneaza true daca numarul este par sau fals in caz contrar </li>
+                        <li>Scrieti o functie esteInInterval(minInterval,maxInterval,numar), care verifica daca numarul este in interval.(interval inchis)</li>
+                    </ol>
+                    <h3>Array: </h3>
                     <pre class="prettyprint lang-js linenums">
-                        // == verifica valoarea, fara sa tina cont de tipul de date
-                        5 == 5  // true 
-                        5 == "5" // true
+                            // Consideram urmatorul array:
+                            var myArr = [1,2,3,4,5];
 
-                        // apar unele situatii neobisnuite
+                            // myArr.length : dimensiunea unui array
+                            console.log(myArr.length) // 6
 
-                        0 == false // true
-                        0 == [] //true
-                        0 == {} // false 
+                            // Parcurgerea unui array
+                            for( i = 0; i < myArr.length; i++){
+                                console.log("elementul :", myArr[i]);
+                            }
 
-                        // === verifica valoarea, inclusiv tipul de date
-                        5 === 5  // true 
-                        5 === "5" // false pentru ca sunt tipuri de date diferite
+                            // Adaugarea unui element in array:
+                            myArr.push(20); // adauga numarul 20 la finalul array-ului.
 
-                        // Instructiunea IF 
+                            //Eliminarea ultimului element din array
+                            myArr.pop();
+                            
+                            // forEach : o metoda mai eleganta de a parcurge un array
+                            // o sa discutam mai mult in laboratoarele urmatoarea despre forEach 
 
-                        if( a >= b){
-                            console.log("a este mai mare sau egal cu b");
-                        }
-                        else{
-                            console.log("b este mai mare decat a");
-                        }
-
+                            myArr.forEach(function(element){
+                                console.log("elementul este", element)
+                            })
                     </pre>
-                    <p>Un tabel complet cu diferenta dintre == si === gasiti aici <a
-                            href="https://dorey.github.io/JavaScript-Equality-Table/" target="_blank">AICI</a></p>
+
+                    <ol> Exercitii
+                        <li>Scrieti o functie sumaElemente(arr) care primeste un array si calculeaza suma elementelor</li>
+                        <li>Scrieti o functie celMaiMare(arr) care returneaza cel mai mare numar din array</li>
+                        <li>Scrieti o functie pozitieCelMaiMare(arr) care returneaza POZITIA(indicele) celui mai mare numar din array</li>
+                        <li>Scrieti o functie sumaElementePozitiePara(arr) care calculeaza suma elementelor de pe pozitii pare</li>
+                        <li>Scrieti o functie sortareArray(arr) care primeste un array si il sorteaza. Nu puteti sa folositi metoda sort care exista deja pe array</li>
+                        <li>Scrieti o functie contineDoarElementePozitive(arr) care returneaza true daca array-ul contine doar elemente pozitive sau false in caz contrar</li>
+                        <li>Scrieti o functie pozitivareArray(arr) care inlocuieste toate elementele negative din array cu 0. Returneaza noul array rezultat</li>
+                        <li>Scrieti o functie formarePorizitie(arr) care primeste o lista de cuvinte si formeaza o propozitie. Cuvintele vor avea spatiu intre ele si propozitia va avea puncti la final.</li>
+                        Ex: ["Acesta","este","un","exercitiu","mai","greu"] o sa devina "Acesta este un exercitiu mai greu."
+                    </ol>
+                    <h3>JSON (JavaScript Object Notation) </h3>
+                    <p>Este cel mai folosit tip de date; Are o structura cheie - valoare</p>
+                    <pre class="prettyprint lang-js linenums">
+
+                        // Exista 2 moduri de a crea un obiect nou:
+
+                        var myObject = new Object(); // varianta mai putin folosita
+                        var myObject2 = {};   // varianta folosita mai des, pentru rapiditate
+
+                        var student = {
+                            "nume":"Ion",
+                            "prenume": "Popescu",
+                            "age":19,
+                            "pasiuni": ["Citit","Statul in casa - COVID 19","Javascript"]
+                            "note": {
+                              "analiza":9,
+                              "algebra":8,
+                              "tehniciWeb":"restanta"
+                            }
+                           } 
+                           // Obseram structura de cheie valoare; 
+                           // Toate acestea se numesc PROPRIETATI ale obiectului
+                           // Observam ca proprietatea "note" este la randul sau un obiect
+
+                           // Accesarea unei proprietati:
+
+                           console.log("first name is",student.nume) // Ion
+                           console.log("Nota la algebra este",student.note.analiza) // Ion
+
+                           // Adaugarea unei proprietati noi:
+
+                           student.numarRestante = 4;
+                    </pre>
+
+                    <p>Observatii</p>
+                    <ol>
+                        <li class="observatie">O sa folosim obiectele foarte des, in tote laboratoarele de acum inainte
+                        </li>
+                        <li class="observatie">JSON este modul standard prin care putem comunica cu partea de
+                            Backend(server)</li>
+                        <li class="observatie">Noi vom trimite obiecte JSON catre Node.js si vom primi inapoi date, tot
+                            sub forma de obiecte</li>
+                    </ol>
 
                     <h3>Afisarea cheilor(proprietatilor) unui obiect</h3>
                     <pre class="prettyprint lang-js linenums">
@@ -455,6 +473,15 @@
                           console.log(Object.keys(object1));
                           // expected output: Array ["a", "b", "c"]
                     </pre>
+
+                    <ol> Exercitii
+                        <li>Adaugati proprietatea culoarePreferata pe obiectul student.(cu ce culoare vreti voi)</li>
+                        <li>Scrieti o functie esteMajor(student) care primeste un obiect de tip student si verifica daca este major</li>
+                        <li>Scrieti o functie areDouaPasiuni(student) care verifica daca studentul are fix 2 pasiuni</li>
+                        <li>Scrieti o functie verificaPasiune(student,pasiune) si verifica daca student are pasiunea respectiva</li>
+                        <li>Scrieti o functie varstaInInterval(student,minInterval,maxInterval) care verifica daca studentul are varsta in interval</li>
+                        <li>Scrieti o functie areRestanta(student), care verifica daca studentul are cel putin o restanta. Se va afisa mesajul "Are restanta" sau "NU are restante"</li>
+                    </ol>
                     <h3>Tema:</h3>
 
                     <p>Descarcati obiectul JSON de <a href="https://pomber.github.io/covid19/timeseries.json"
